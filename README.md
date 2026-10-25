@@ -1,48 +1,42 @@
-# Web Application แบบทดสอบ: การจัดการเทคโนโลยีสารสนเทศในอุตสาหกรรมการท่องเที่ยวและบริการ
+# E-Testing & Quiz Portal: ระบบแบบทดสอบวัดความรู้ทางวิชาการ (160 ข้อ)
 
-เว็บแอปพลิเคชันระบบทดสอบความรู้และติวข้อสอบ (Interactive Quiz Web App) จำนวน 80 ข้อ ครอบคลุมเนื้อหาสำคัญตามหลักสูตรวิชา **"การจัดการเทคโนโลยีสารสนเทศในอุตสาหกรรมการท่องเที่ยวและบริการ"** พัฒนาขึ้นด้วยเทคโนโลยี HTML5, CSS3 และ Modern JavaScript แบบ Standalone Single-file พร้อมใช้งานได้ทันทีบนทุกอุปกรณ์ (Responsive Web Design)
+เว็บแอปพลิเคชันระบบทดสอบความรู้และติวข้อสอบออนไลน์ (Interactive Quiz Portal) ครอบคลุม 2 รายวิชา รวม 160 ข้อ พัฒนาขึ้นด้วยเทคโนโลยี HTML5, CSS3 และ Modern JavaScript แบบ Standalone Single-file 100% สวยงาม ทันสมัย รองรับ Responsive บนทุกหน้าจอ
 
 🌐 **เข้าใช้งานออนไลน์ผ่าน GitHub Pages**: [https://wiwatpromwihan.github.io/tourism-it-quiz-app/](https://wiwatpromwihan.github.io/tourism-it-quiz-app/)
 
 ---
 
-## 🎯 ฟังก์ชันการทำงานของระบบ (Key Features)
+## 📚 รายวิชาที่มีในระบบ (Subject Modules)
 
-1. **หน้าแรก (Welcome Screen)**
-   - สรุปรายละเอียดและโครงสร้างแบบทดสอบทั้ง 5 หมวดวิชา รวม 80 ข้อ
-   - สวิตช์เปิด/ปิด **"โหมดสุ่มคำถาม (Shuffle Mode)"** สำหรับการฝึกซ้อมซ้ำ
-   - ปุ่ม **"เริ่มทำแบบทดสอบ (80 ข้อ)"**
+### วิชาที่ 1: การจัดการเทคโนโลยีสารสนเทศในอุตสาหกรรมการท่องเที่ยวและบริการ (80 ข้อ)
+- **ส่วนที่ 1 (10 ข้อ)**: ความรู้เบื้องต้นเกี่ยวกับการบริการ (Characteristics of Services: Intangibility, Inseparability, Variability, Perishability, Service Blueprint, Moment of Truth, GAP Model)
+- **ส่วนที่ 2 (20 ข้อ)**: คุณลักษณะเฉพาะทั้ง 8 ประการของเทคโนโลยี E-commerce (Ubiquity, Global Reach, Universal Standards, Richness, Interactivity, Information Density, Personalization/Customization, Social Technology)
+- **ส่วนที่ 3 (15 ข้อ)**: องค์ประกอบขององค์กรตามเเผนธุรกิจ (Business Plan: Executive Summary, 7Ps Service Marketing, Operations Plan, Financial Plan, IT Plan, Risk Management)
+- **ส่วนที่ 4 (20 ข้อ)**: กรณีศึกษาการจัดการ IT ในธุรกิจท่องเที่ยวและบริการในไทย (Happy Together, Facebook/LINE OA, QR Code, Trust & Utility, ROPO, Showrooming, Browsers vs Buyers)
+- **ส่วนที่ 5 (15 ข้อ)**: กรณีศึกษาการจัดการ IT ร้านเช่าชุดออนไลน์ Velia Rental Store (Instagram Marketing, สต็อกคิวชุดและกล้อง, ปัญหา Double Booking, Online Booking System, Time-based Reservation, Security Deposit)
 
-2. **ระบบการทำแบบทดสอบ (Interactive Quiz Screen)**
-   - แสดงคำถามทีละ 1 ข้อ พร้อมตัวเลือก 4 ตัวเลือก (ก, ข, ค, ง)
-   - แถบความคืบหน้า (Progress Bar) และตัวระบุหมวดหมู่วิชา
-   - **ระบบ Interactive เฉลยทันที**: ไฮไลท์ **สีเขียว** ที่ข้อถูก และ **สีแดง** ที่ข้อผิดเมื่อผู้ใช้คลิกเลือก
-   - **กล่องคำอธิบายเฉลยทางวิชาการ**: อธิบายเหตุผลและทฤษฎีอ้างอิงอย่างละเอียดใต้คำถาม
-   - **ปุ่ม "ข้อถัดไป"**: ให้ผู้ใช้มีเวลาอ่านและทำความเข้าใจคำอธิบายเฉลยได้ตามต้องการ ก่อนก้าวสู่ข้อถัดไป
-
-3. **หน้าสรุปผลการประเมิน (Comprehensive Result Screen)**
-   - แสดงคะแนนรวมสุทธิ (Total Score / 80) และร้อยละ (%)
-   - ป้ายระดับผลการประเมิน (ยอดเยี่ยม / ผ่านเกณฑ์มาตรฐาน / ควรทบทวนเพิ่มเติม)
-   - **Section Breakdown**: กราฟแท่งจำแนกคะแนนตามรายหมวดทั้ง 5 ส่วน เพื่อวิเคราะห์จุดแข็ง-จุดอ่อน
-   - **โหมดทบทวนข้อสอบ (Review Mode)**: แสดงรายการข้อสอบทั้ง 80 ข้อ พร้อมเปรียบเทียบคำตอบของผู้ใช้ เฉลยที่ถูกต้อง และคำอธิบาย
-   - ปุ่ม **"ทำแบบทดสอบอีกครั้ง"** เพื่อเริ่มทำใหม่
+### วิชาที่ 2: การพัฒนา Mobile Application ด้วย Flutter & Dart (80 ข้อ ระดับ ป.ตรี)
+- **หมวดที่ 1 (15 ข้อ)**: สถาปัตยกรรมการทำงานของ Flutter และ Build System (Engine, Impeller/Skia, Widget/Element/RenderObject Tree, Hot Reload vs Hot Restart, pubspec.yaml, flutter pub get, pub.dev, APK Build debug vs release, split-per-abi)
+- **หมวดที่ 2 (15 ข้อ)**: ภาษา Dart และหลักการ Object-Oriented Programming (Sound Null Safety, คีย์เวิร์ด `late`, `const` vs `final`, การสืบทอดคุณสมบัติ `extends`, `implements`, `with` mixin, `dart:convert`: `jsonDecode`, `jsonEncode`)
+- **หมวดที่ 3 (20 ข้อ)**: Widgets พื้นฐานและการจัดวาง Layout (`StatelessWidget` vs `StatefulWidget`, `mainAxisAlignment`, `crossAxisAlignment`, `Positioned` inside Stack, `EdgeInsets.symmetric`, การแก้ปัญหา `A RenderFlex overflowed`, `GridView.count` กับ `crossAxisCount`, `Expanded`, `SizedBox`, `SafeArea`)
+- **หมวดที่ 4 (15 ข้อ)**: Responsive Design และการจัดการฟอร์มรับข้อมูล (`MediaQuery.of(context).size.width`, `TextField` / `TextFormField`, `obscureText: true`, `TextEditingController`, Form Validation, `LayoutBuilder`, `SingleChildScrollView` แก้คีย์บอร์ดบัง)
+- **หมวดที่ 5 (15 ข้อ)**: วงจรชีวิต Widget, State Management & การโปรแกรมแบบอะซิงโครนัส (`initState()`, `dispose()`, `extends ChangeNotifier` กับ `notifyListeners()`, `Future<String> fetchName() async`, `FutureBuilder`, `StreamBuilder`, `Navigator.push/pop`, `if (!mounted) return`)
 
 ---
 
-## 📚 โครงสร้างคลังข้อสอบ 80 ข้อ (Question Bank Distribution)
+## 🎯 ฟังก์ชันเด่นของระบบ (Key Features)
 
-| ส่วนที่ | หมวดหมู่เนื้อหา | จำนวนข้อ | ขอบเขตเนื้อหาหลัก |
-| :---: | :--- | :---: | :--- |
-| **1** | ความรู้เบื้องต้นเกี่ยวกับการบริการ | **10 ข้อ** | ทฤษฎีคุณลักษณะของการบริการ (Characteristics of Services: Intangibility, Inseparability, Variability, Perishability), Service Blueprint, Moment of Truth, GAP Model |
-| **2** | คุณลักษณะเฉพาะทั้ง 8 ประการของ E-commerce | **20 ข้อ** | Ubiquity, Global Reach, Universal Standards, Richness, Interactivity, Information Density, Personalization/Customization, Social Technology |
-| **3** | องค์ประกอบขององค์กรตามแผนธุรกิจ | **15 ข้อ** | โครงสร้าง Business Plan: Executive Summary, Value Proposition, 7Ps Marketing Mix, Operations Plan, Financial Plan, IT/Technology Plan, Risk Management |
-| **4** | กรณีศึกษา IT ท่องเที่ยวและบริการในไทย | **20 ข้อ** | Happy Together, Facebook/LINE OA, การใช้ QR Code, การสร้าง Trust (ใบอนุญาตนำเที่ยว) & Utility, พฤติกรรมผู้บริโภค (ROPO, Showrooming, Webrooming, Browsers vs Buyers) |
-| **5** | กรณีศึกษา IT ร้านเช่าชุดออนไลน์ Velia Rental Store | **15 ข้อ** | Instagram Marketing, การจัดการสต็อกคิวชุดและกล้อง, ปัญหา Double Booking และการแก้ด้วยระบบ Online Booking System, Time-based Reservation, การจัดการเงินประกัน |
+1. **หน้าแรก Subject Portal**: การ์ดแสดงรายวิชาสไตล์ Dashboard สวยงาม สามารถคลิกเลือกวิชาหรือเปลี่ยนวิชาได้ตลอดเวลา
+2. **ระบบสลับตัวเลือกเฉลยสมดุล (Balanced Distribution)**: คำตอบที่ถูกต้องถูกกระจายระหว่าง ก, ข, ค, ง เฉลี่ยเท่ากันอย่างเป็นธรรมชาติ (~25% ต่อตัวเลือก)
+3. **รองรับ Code Snippet Box**: ข้อสอบที่มีโค้ดโปรแกรมจะถูกไฮไลท์ในกล่อง Monospace Dark Theme อ่านง่าย ชัดเจน
+4. **ระบบตรวจคำตอบทันที (Instant Interactive Feedback)**: ไฮไลท์ **สีเขียว** ที่ข้อถูก และ **สีแดง** ที่ข้อผิดทันทีที่คลิก พร้อมกล่องคำอธิบายเฉลยทางวิชาการ
+5. **ปุ่ม "ข้อถัดไป" (Manual Navigation)**: ควบคุมการเปลี่ยนข้อด้วยตนเอง ทำให้อ่านทำความเข้าใจเฉลยได้โดยไม่ต้องเร่งรีบ
+6. **ระบบวิเคราะห์คะแนน (Section Breakdown)**: กราฟแท่งจำแนกคะแนนตาม 5 หมวดหมู่ย่อยของแต่ละวิชา ชี้ชัดจุดแข็ง-จุดอ่อน
+7. **โหมดทบทวนข้อสอบ (Review Mode)**: แสดงรายการข้อสอบทั้ง 80 ข้อ พร้อมคำตอบที่เลือก เฉลยที่ถูกต้อง และคำอธิบาย
+8. **โหมดสุ่มคำถาม (Shuffle Mode)**: สลับลำดับคำถามสำหรับใช้ฝึกซ้อมซ้ำ
 
 ---
 
 ## 💻 วิธีการเปิดใช้งานในเครื่อง (Local Usage)
 
-สามารถเปิดใช้งานได้โดยตรงโดยไม่ต้องติดตั้งเซิร์ฟเวอร์หรือไลบรารีภายนอก:
-1. ดาวน์โหลดหรือเปิดไฟล์ `index.html`
-2. ดับเบิ้ลคลิกเพื่อเปิดผ่านเบราว์เซอร์ใดก็ได้ เช่น Google Chrome, Safari, Microsoft Edge หรือ Firefox
+เปิดไฟล์ `index.html` ผ่านเว็บเบราว์เซอร์ใดก็ได้ (Chrome, Safari, Edge, Firefox) โดยไม่ต้องติดตั้งโปรแกรมหรือเซิร์ฟเวอร์เสริม
