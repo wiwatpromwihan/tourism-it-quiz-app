@@ -1468,6 +1468,8 @@
         console.error("Sign-in error:", error);
         if (error.code === 'auth/unauthorized-domain') {
           alert("แจ้งเตือน: โดเมนนี้ (" + window.location.hostname + ") ยังไม่ได้รับอนุญาตใน Firebase Console\n\nกรุณาไปที่ Firebase Console > Authentication > Settings > Authorized domains แล้วเพิ่ม '" + window.location.hostname + "'\n\n(ทั้งนี้ ท่านยังคงใช้งานและบันทึกข้อมูลอัตโนมัติในเครื่องได้ตามปกติ)");
+        } else if (error.code === 'auth/configuration-not-found') {
+          alert("แจ้งเตือน: ยังไม่ได้เปิดใช้งาน Google Sign-In ใน Firebase Console\n\nวิธีแก้ไขง่ายๆ:\n1. เข้า Firebase Console (tourism-it-quiz-app)\n2. เมนูซ้ายเลือก Authentication > แท็บ Sign-in method\n3. คลิกเลือก 'Google' สับสวิตช์เปิดใช้งาน (Enable) และเลือกอีเมล Support Email จากนั้นกด Save\n4. กลับมารีเฟรชหน้านี้แล้วล็อกอินได้ทันทีครับ!");
         } else if (error.code !== 'auth/popup-closed-by-user') {
           alert("ไม่สามารถเข้าสู่ระบบด้วย Google ได้: " + error.message);
         }
