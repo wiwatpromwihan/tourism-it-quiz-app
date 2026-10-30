@@ -10,6 +10,7 @@ from build_full_app import mobile_questions
 from generate_iot_questions import iot_questions
 # 4. Load Business Intelligence questions
 from generate_bi_questions import bi_questions, bi_guidelines_20
+from bi_written_exam_data import bi_written_questions_20
 
 # 25 Original Guideline Questions for Reference Modal
 iot_guidelines_25 = [
@@ -149,6 +150,7 @@ subjects = {
             {"name": "หมวดที่ 5: การคำนวณด้วย DAX และการเลือกวิชวลตอบโจทย์ธุรกิจ (Data Visualization)", "count": 16}
         ],
         "guidelines": bi_guidelines_20,
+        "written_exam": bi_written_questions_20,
         "questions": bi_questions
     }
 }

@@ -537,6 +537,290 @@ html_content = f"""<!DOCTYPE html>
       background: #15803d;
     }}
 
+    /* Mode Selector Box */
+    .mode-selector-box {{
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      background: #f1f5f9;
+      padding: 6px;
+      border-radius: var(--radius-md);
+    }}
+
+    .mode-tab-btn {{
+      flex: 1;
+      padding: 12px 16px;
+      border: none;
+      background: transparent;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }}
+
+    .mode-tab-btn:hover {{
+      color: var(--primary);
+    }}
+
+    .mode-tab-btn.active {{
+      background: #ffffff;
+      color: var(--primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }}
+
+    /* Written Exam Screen */
+    .written-header-card {{
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color: white;
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-md);
+    }}
+
+    .written-badge {{
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      backdrop-filter: blur(4px);
+    }}
+
+    .written-main-title {{
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }}
+
+    .written-main-desc {{
+      font-size: 0.95rem;
+      opacity: 0.9;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }}
+
+    .written-stats-row {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }}
+
+    .written-stat-pill {{
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }}
+
+    .written-part-divider {{
+      background: #e2e8f0;
+      color: #334155;
+      font-weight: 700;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      margin: 24px 0 16px 0;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }}
+
+    .written-q-card {{
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }}
+
+    .written-q-card:hover {{
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }}
+
+    .written-q-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }}
+
+    .written-q-title {{
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }}
+
+    .written-q-badges {{
+      display: flex;
+      gap: 6px;
+    }}
+
+    .badge-score {{
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }}
+
+    .badge-type {{
+      background: #f1f5f9;
+      color: #475569;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }}
+
+    .written-q-text {{
+      font-size: 0.98rem;
+      color: #1e293b;
+      line-height: 1.65;
+      margin-bottom: 14px;
+      white-space: pre-line;
+      background: #f8fafc;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--primary);
+    }}
+
+    .written-practice-box {{
+      margin-top: 12px;
+      margin-bottom: 14px;
+    }}
+
+    .written-practice-box textarea {{
+      width: 100%;
+      min-height: 90px;
+      padding: 10px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      resize: vertical;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }}
+
+    .written-practice-box textarea:focus {{
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }}
+
+    .btn-toggle-answer {{
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }}
+
+    .btn-toggle-answer:hover {{
+      background: #e2e8f0;
+      color: #0f172a;
+    }}
+
+    .written-answer-box {{
+      display: none;
+      margin-top: 14px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius-sm);
+      padding: 16px;
+    }}
+
+    .written-answer-box.active {{
+      display: block;
+    }}
+
+    .ans-sec-title {{
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #166534;
+      margin-bottom: 4px;
+      margin-top: 10px;
+    }}
+
+    .ans-sec-title:first-child {{
+      margin-top: 0;
+    }}
+
+    .ans-sec-content {{
+      font-size: 0.92rem;
+      color: #14532d;
+      line-height: 1.6;
+      white-space: pre-line;
+      background: #ffffff;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid #dcfce7;
+      margin-bottom: 8px;
+    }}
+
+    .ans-code-block {{
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 12px;
+      border-radius: 6px;
+      font-family: var(--font-code);
+      font-size: 0.85rem;
+      line-height: 1.5;
+      overflow-x: auto;
+      white-space: pre;
+    }}
+
+    /* Print view styles */
+    @media print {{
+      body {{
+        background: white !important;
+        color: black !important;
+      }}
+      .app-header, .portal-grid, #startScreen, #quizScreen, #resultScreen, #guidelinesModal, .btn, .btn-toggle-answer, .written-practice-box textarea, .mode-selector-box {{
+        display: none !important;
+      }}
+      #writtenScreen {{
+        display: block !important;
+      }}
+      .written-answer-box {{
+        display: block !important;
+      }}
+      .written-q-card {{
+        page-break-inside: avoid;
+        border: 1px solid #000 !important;
+        box-shadow: none !important;
+        margin-bottom: 20px !important;
+      }}
+    }}
+
     /* Modal for Guidelines */
     .modal-overlay {{
       display: none;
@@ -1228,10 +1512,10 @@ html_content = f"""<!DOCTYPE html>
                 <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
               </div>
               <h2 class="subject-card-title">ธุรกิจอัจฉริยะ (Business Intelligence Blueprint)</h2>
-              <p class="subject-card-desc">สถาปัตยกรรมข้อมูล 80 ข้อ: Data Roles (DE, DA, DS), Data Quality 6 มิติ, Power Query Cleansing, Star Schema (Fact/Dimension), Cardinality, DAX Measures และการเลือกวิชวลตอบโจทย์ธุรกิจ</p>
+              <p class="subject-card-desc">สถาปัตยกรรมข้อมูล 80 ข้อปรนัย + 20 ข้อเขียน: Data Roles (DE, DA, DS), Data Quality 6 มิติ, Power Query Cleansing, Star Schema (Fact/Dimension), Cardinality, DAX Measures และการเลือกวิชวลตอบโจทย์ธุรกิจ</p>
             </div>
             <div class="subject-footer">
-              <span class="subject-pill">80 ข้อ</span>
+              <span class="subject-pill" style="background: #f3e8ff; color: #7e22ce; font-weight: 700;">80 ปรนัย + 20 ข้อเขียน</span>
               <span class="btn-select">
                 เข้าทำข้อสอบ
                 <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
@@ -1253,6 +1537,16 @@ html_content = f"""<!DOCTYPE html>
               📋 ดูแนวทางข้อสอบฉบับเต็ม
             </button>
           </div>
+        </div>
+
+        <!-- Mode Switcher Tabs (For subjects with written exam like BI) -->
+        <div id="subjectModeSelector" class="mode-selector-box" style="display: none;">
+          <button id="modeQuizBtn" class="mode-tab-btn active" onclick="switchSubjectMode('quiz')">
+            🔘 โหมดแบบทดสอบปรนัย (80 ข้อ)
+          </button>
+          <button id="modeWrittenBtn" class="mode-tab-btn" onclick="switchSubjectMode('written')">
+            📝 โหมดคลังข้อสอบข้อเขียน (20 ข้อ อัตนัย 100 คะแนน)
+          </button>
         </div>
 
         <!-- In-Progress Resume Alert Box -->
@@ -1298,6 +1592,40 @@ html_content = f"""<!DOCTYPE html>
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           เริ่มทำแบบทดสอบใหม่ (80 ข้อ)
         </button>
+      </section>
+
+      <!-- ================= 1.5 WRITTEN EXAM SCREEN ================= -->
+      <section id="writtenScreen" class="screen">
+        <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <button class="btn btn-secondary" onclick="backToSubjectOverview()" style="padding: 8px 16px; font-size: 0.9rem;">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            กลับหน้ารายวิชา
+          </button>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn btn-secondary" onclick="toggleAllWrittenAnswers()" id="toggleAllAnswersBtn" style="padding: 8px 14px; font-size: 0.85rem;">
+              👁️ เปิด/ซ่อนเฉลยทั้งหมด
+            </button>
+            <button class="btn btn-primary" onclick="window.print()" style="padding: 8px 16px; font-size: 0.85rem;">
+              🖨️ พิมพ์ / บันทึก PDF
+            </button>
+          </div>
+        </div>
+
+        <div class="written-header-card">
+          <div class="written-badge">แบบทดสอบวัดความรู้ความสามารถทางวิชาการ (ข้อเขียน)</div>
+          <h2 class="written-main-title" id="writtenMainTitle">คลังข้อสอบข้อเขียน วิชา ธุรกิจอัจฉริยะ (Business Intelligence)</h2>
+          <p class="written-main-desc">ชุดข้อสอบอัตนัยระดับปริญญาตรี จำนวน 20 ข้อ รวม 100 คะแนนเต็ม สร้างตรงตามเอกสาร Business Intelligence Blueprint พร้อมคีย์เฉลย เกณฑ์การให้คะแนน และข้อความอ้างอิงตรงจากสไลด์</p>
+          <div class="written-stats-row">
+            <span class="written-stat-pill">📝 ข้อสอบ 20 ข้อ</span>
+            <span class="written-stat-pill">💯 100 คะแนนเต็ม</span>
+            <span class="written-stat-pill">🎯 50:50 ทฤษฎี & สถานการณ์</span>
+            <span class="written-stat-pill">📊 มีข้อคำนวณและโค้ดตรวจผล</span>
+          </div>
+        </div>
+
+        <div id="writtenQuestionsList">
+          <!-- Injected by JS -->
+        </div>
       </section>
 
       <!-- ================= 2. QUIZ SCREEN ================= -->
@@ -1589,6 +1917,7 @@ html_content = f"""<!DOCTYPE html>
     // DOM Elements
     const portalScreen = document.getElementById('portalScreen');
     const startScreen = document.getElementById('startScreen');
+    const writtenScreen = document.getElementById('writtenScreen');
     const quizScreen = document.getElementById('quizScreen');
     const resultScreen = document.getElementById('resultScreen');
 
@@ -1621,9 +1950,125 @@ html_content = f"""<!DOCTYPE html>
     const nextBtn = document.getElementById('nextBtn');
 
     function switchScreen(screenToShow) {{
-      [portalScreen, startScreen, quizScreen, resultScreen].forEach(s => s.classList.remove('active'));
+      [portalScreen, startScreen, writtenScreen, quizScreen, resultScreen].forEach(s => s.classList.remove('active'));
       screenToShow.classList.add('active');
       window.scrollTo({{ top: 0, behavior: 'smooth' }});
+    }}
+
+    function switchSubjectMode(mode) {{
+      const quizBtn = document.getElementById('modeQuizBtn');
+      const writtenBtn = document.getElementById('modeWrittenBtn');
+      if (mode === 'written') {{
+        if (quizBtn) quizBtn.classList.remove('active');
+        if (writtenBtn) writtenBtn.classList.add('active');
+        renderWrittenExam();
+        switchScreen(writtenScreen);
+      }} else {{
+        if (writtenBtn) writtenBtn.classList.remove('active');
+        if (quizBtn) quizBtn.classList.add('active');
+        switchScreen(startScreen);
+      }}
+    }}
+
+    function backToSubjectOverview() {{
+      const quizBtn = document.getElementById('modeQuizBtn');
+      const writtenBtn = document.getElementById('modeWrittenBtn');
+      if (writtenBtn) writtenBtn.classList.remove('active');
+      if (quizBtn) quizBtn.classList.add('active');
+      switchScreen(startScreen);
+    }}
+
+    let allWrittenExpanded = false;
+    function toggleAllWrittenAnswers() {{
+      allWrittenExpanded = !allWrittenExpanded;
+      const boxes = document.querySelectorAll('.written-answer-box');
+      boxes.forEach(b => {{
+        if (allWrittenExpanded) b.classList.add('active');
+        else b.classList.remove('active');
+      }});
+      const btn = document.getElementById('toggleAllAnswersBtn');
+      if (btn) btn.textContent = allWrittenExpanded ? '🙈 ซ่อนเฉลยทั้งหมด' : '👁️ เปิดดูเฉลยทั้งหมด';
+    }}
+
+    function toggleWrittenAnswer(qId) {{
+      const box = document.getElementById('ansBox_' + qId);
+      if (!box) return;
+      box.classList.toggle('active');
+    }}
+
+    function renderWrittenExam() {{
+      const subj = allSubjects[currentSubjectKey];
+      if (!subj || !subj.written_exam) return;
+      
+      const container = document.getElementById('writtenQuestionsList');
+      container.innerHTML = '';
+      
+      let currentPartName = '';
+
+      subj.written_exam.forEach((q, idx) => {{
+        if (q.part && q.part !== currentPartName) {{
+          currentPartName = q.part;
+          const partDiv = document.createElement('div');
+          partDiv.className = 'written-part-divider';
+          partDiv.innerHTML = `<span>📂 ${{currentPartName}}</span>`;
+          container.appendChild(partDiv);
+        }}
+
+        const card = document.createElement('div');
+        card.className = 'written-q-card';
+        card.id = 'writtenCard_' + q.id;
+
+        const codeBlock = q.code ? `
+          <div class="ans-sec-title">💻 โค้ด Python สำหรับตรวจผลลัพธ์การคำนวณ (Automated Verification):</div>
+          <pre class="ans-code-block"><code>${{escapeHtml(q.code)}}</code></pre>
+        ` : '';
+
+        card.innerHTML = `
+          <div class="written-q-header">
+            <span class="written-q-title">${{escapeHtml(q.title || 'ข้อที่ ' + q.id)}}</span>
+            <div class="written-q-badges">
+              <span class="badge-score">คะแนนเต็ม ${{q.score}} คะแนน</span>
+              <span class="badge-type">${{escapeHtml(q.type || 'อัตนัย')}}</span>
+            </div>
+          </div>
+          <div class="written-q-text">${{escapeHtml(q.question)}}</div>
+          
+          <div class="written-practice-box">
+            <textarea placeholder="พื้นที่สำหรับนักศึกษาฝึกพิมพ์ตอบคำถามข้อนี้ (จำลองการทำข้อเขียน)..."></textarea>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end;">
+            <button class="btn-toggle-answer" onclick="toggleWrittenAnswer(${{q.id}})">
+              <span>👁️ ดูแนวคำตอบ เฉลย และเกณฑ์การตรวจ</span>
+            </button>
+          </div>
+
+          <div class="written-answer-box" id="ansBox_${{q.id}}">
+            <div class="ans-sec-title">✅ คีย์ / แนวคำตอบมาตรฐาน:</div>
+            <div class="ans-sec-content">${{escapeHtml(q.answer)}}</div>
+
+            <div class="ans-sec-title">📊 เกณฑ์การให้คะแนน (Scoring Rubric):</div>
+            <div class="ans-sec-content">${{escapeHtml(q.rubric)}}</div>
+
+            <div class="ans-sec-title">📖 ข้อความอ้างอิงจากเอกสารสไลด์:</div>
+            <div class="ans-sec-content"><strong>แหล่งอ้างอิง:</strong> ${{escapeHtml(q.reference)}}<br><br><strong>ข้อความตรง:</strong><br>${{escapeHtml(q.quote || '')}}</div>
+
+            ${{codeBlock}}
+          </div>
+        `;
+
+        container.appendChild(card);
+      }});
+    }}
+
+    function escapeHtml(str) {{
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
     }}
 
     // Update tags on Portal cards indicating in-progress quizzes
@@ -1711,6 +2156,18 @@ html_content = f"""<!DOCTYPE html>
         }}
 
         modalGuidelinesList.innerHTML = '';
+        if (subjKey === 'bi') {{
+          const bannerAction = document.createElement('div');
+          bannerAction.style.cssText = 'margin-bottom: 16px; padding: 12px; background: #f3e8ff; border: 1px solid #d8b4fe; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;';
+          bannerAction.innerHTML = `
+            <span style="font-size: 0.9rem; font-weight: 700; color: #6b21a8;">💡 คุณสามารถเปิดทำข้อสอบข้อเขียนพร้อมกล่องพิมพ์ตอบได้</span>
+            <button class="btn btn-primary" style="padding: 6px 14px; font-size: 0.85rem;" onclick="closeGuidelinesModal(); switchSubjectMode('written');">
+              📝 เปิดโหมดข้อสอบข้อเขียนเต็มจอ
+            </button>
+          `;
+          modalGuidelinesList.appendChild(bannerAction);
+        }}
+
         subj.guidelines.forEach(item => {{
           const div = document.createElement('div');
           div.className = 'guideline-item';
@@ -1720,6 +2177,20 @@ html_content = f"""<!DOCTYPE html>
       }} else {{
         guidelinesBanner.style.display = 'none';
         guidelinesBtnContainer.style.display = 'none';
+      }}
+
+      // Toggle mode selector for subjects with written exam
+      const modeBox = document.getElementById('subjectModeSelector');
+      if (modeBox) {{
+        if (subj.written_exam && subj.written_exam.length > 0) {{
+          modeBox.style.display = 'flex';
+          const quizBtn = document.getElementById('modeQuizBtn');
+          const writtenBtn = document.getElementById('modeWrittenBtn');
+          if (quizBtn) quizBtn.classList.add('active');
+          if (writtenBtn) writtenBtn.classList.remove('active');
+        }} else {{
+          modeBox.style.display = 'none';
+        }}
       }}
 
       // Check for saved progress

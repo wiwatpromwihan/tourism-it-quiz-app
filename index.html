@@ -528,6 +528,290 @@
       background: #15803d;
     }
 
+    /* Mode Selector Box */
+    .mode-selector-box {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      background: #f1f5f9;
+      padding: 6px;
+      border-radius: var(--radius-md);
+    }
+
+    .mode-tab-btn {
+      flex: 1;
+      padding: 12px 16px;
+      border: none;
+      background: transparent;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .mode-tab-btn:hover {
+      color: var(--primary);
+    }
+
+    .mode-tab-btn.active {
+      background: #ffffff;
+      color: var(--primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    /* Written Exam Screen */
+    .written-header-card {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color: white;
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .written-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      backdrop-filter: blur(4px);
+    }
+
+    .written-main-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .written-main-desc {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .written-stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .written-stat-pill {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .written-part-divider {
+      background: #e2e8f0;
+      color: #334155;
+      font-weight: 700;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      margin: 24px 0 16px 0;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .written-q-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+
+    .written-q-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }
+
+    .written-q-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .written-q-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .written-q-badges {
+      display: flex;
+      gap: 6px;
+    }
+
+    .badge-score {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .badge-type {
+      background: #f1f5f9;
+      color: #475569;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .written-q-text {
+      font-size: 0.98rem;
+      color: #1e293b;
+      line-height: 1.65;
+      margin-bottom: 14px;
+      white-space: pre-line;
+      background: #f8fafc;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--primary);
+    }
+
+    .written-practice-box {
+      margin-top: 12px;
+      margin-bottom: 14px;
+    }
+
+    .written-practice-box textarea {
+      width: 100%;
+      min-height: 90px;
+      padding: 10px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      resize: vertical;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }
+
+    .written-practice-box textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .btn-toggle-answer {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-toggle-answer:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .written-answer-box {
+      display: none;
+      margin-top: 14px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius-sm);
+      padding: 16px;
+    }
+
+    .written-answer-box.active {
+      display: block;
+    }
+
+    .ans-sec-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #166534;
+      margin-bottom: 4px;
+      margin-top: 10px;
+    }
+
+    .ans-sec-title:first-child {
+      margin-top: 0;
+    }
+
+    .ans-sec-content {
+      font-size: 0.92rem;
+      color: #14532d;
+      line-height: 1.6;
+      white-space: pre-line;
+      background: #ffffff;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid #dcfce7;
+      margin-bottom: 8px;
+    }
+
+    .ans-code-block {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 12px;
+      border-radius: 6px;
+      font-family: var(--font-code);
+      font-size: 0.85rem;
+      line-height: 1.5;
+      overflow-x: auto;
+      white-space: pre;
+    }
+
+    /* Print view styles */
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .app-header, .portal-grid, #startScreen, #quizScreen, #resultScreen, #guidelinesModal, .btn, .btn-toggle-answer, .written-practice-box textarea, .mode-selector-box {
+        display: none !important;
+      }
+      #writtenScreen {
+        display: block !important;
+      }
+      .written-answer-box {
+        display: block !important;
+      }
+      .written-q-card {
+        page-break-inside: avoid;
+        border: 1px solid #000 !important;
+        box-shadow: none !important;
+        margin-bottom: 20px !important;
+      }
+    }
+
     /* Modal for Guidelines */
     .modal-overlay {
       display: none;
@@ -1219,10 +1503,10 @@
                 <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
               </div>
               <h2 class="subject-card-title">ธุรกิจอัจฉริยะ (Business Intelligence Blueprint)</h2>
-              <p class="subject-card-desc">สถาปัตยกรรมข้อมูล 80 ข้อ: Data Roles (DE, DA, DS), Data Quality 6 มิติ, Power Query Cleansing, Star Schema (Fact/Dimension), Cardinality, DAX Measures และการเลือกวิชวลตอบโจทย์ธุรกิจ</p>
+              <p class="subject-card-desc">สถาปัตยกรรมข้อมูล 80 ข้อปรนัย + 20 ข้อเขียน: Data Roles (DE, DA, DS), Data Quality 6 มิติ, Power Query Cleansing, Star Schema (Fact/Dimension), Cardinality, DAX Measures และการเลือกวิชวลตอบโจทย์ธุรกิจ</p>
             </div>
             <div class="subject-footer">
-              <span class="subject-pill">80 ข้อ</span>
+              <span class="subject-pill" style="background: #f3e8ff; color: #7e22ce; font-weight: 700;">80 ปรนัย + 20 ข้อเขียน</span>
               <span class="btn-select">
                 เข้าทำข้อสอบ
                 <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
@@ -1244,6 +1528,16 @@
               📋 ดูแนวทางข้อสอบฉบับเต็ม
             </button>
           </div>
+        </div>
+
+        <!-- Mode Switcher Tabs (For subjects with written exam like BI) -->
+        <div id="subjectModeSelector" class="mode-selector-box" style="display: none;">
+          <button id="modeQuizBtn" class="mode-tab-btn active" onclick="switchSubjectMode('quiz')">
+            🔘 โหมดแบบทดสอบปรนัย (80 ข้อ)
+          </button>
+          <button id="modeWrittenBtn" class="mode-tab-btn" onclick="switchSubjectMode('written')">
+            📝 โหมดคลังข้อสอบข้อเขียน (20 ข้อ อัตนัย 100 คะแนน)
+          </button>
         </div>
 
         <!-- In-Progress Resume Alert Box -->
@@ -1289,6 +1583,40 @@
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           เริ่มทำแบบทดสอบใหม่ (80 ข้อ)
         </button>
+      </section>
+
+      <!-- ================= 1.5 WRITTEN EXAM SCREEN ================= -->
+      <section id="writtenScreen" class="screen">
+        <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <button class="btn btn-secondary" onclick="backToSubjectOverview()" style="padding: 8px 16px; font-size: 0.9rem;">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            กลับหน้ารายวิชา
+          </button>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn btn-secondary" onclick="toggleAllWrittenAnswers()" id="toggleAllAnswersBtn" style="padding: 8px 14px; font-size: 0.85rem;">
+              👁️ เปิด/ซ่อนเฉลยทั้งหมด
+            </button>
+            <button class="btn btn-primary" onclick="window.print()" style="padding: 8px 16px; font-size: 0.85rem;">
+              🖨️ พิมพ์ / บันทึก PDF
+            </button>
+          </div>
+        </div>
+
+        <div class="written-header-card">
+          <div class="written-badge">แบบทดสอบวัดความรู้ความสามารถทางวิชาการ (ข้อเขียน)</div>
+          <h2 class="written-main-title" id="writtenMainTitle">คลังข้อสอบข้อเขียน วิชา ธุรกิจอัจฉริยะ (Business Intelligence)</h2>
+          <p class="written-main-desc">ชุดข้อสอบอัตนัยระดับปริญญาตรี จำนวน 20 ข้อ รวม 100 คะแนนเต็ม สร้างตรงตามเอกสาร Business Intelligence Blueprint พร้อมคีย์เฉลย เกณฑ์การให้คะแนน และข้อความอ้างอิงตรงจากสไลด์</p>
+          <div class="written-stats-row">
+            <span class="written-stat-pill">📝 ข้อสอบ 20 ข้อ</span>
+            <span class="written-stat-pill">💯 100 คะแนนเต็ม</span>
+            <span class="written-stat-pill">🎯 50:50 ทฤษฎี & สถานการณ์</span>
+            <span class="written-stat-pill">📊 มีข้อคำนวณและโค้ดตรวจผล</span>
+          </div>
+        </div>
+
+        <div id="writtenQuestionsList">
+          <!-- Injected by JS -->
+        </div>
       </section>
 
       <!-- ================= 2. QUIZ SCREEN ================= -->
@@ -4890,6 +5218,268 @@
       "ข้อที่ 19 (6 คะแนน) [สถานการณ์ Decomposition Tree]: ผู้บริหารพบปัญหายอดขายรวมในไตรมาสนี้ลดลงอย่างมาก จงอธิบายว่าทำไม Decomposition Tree จึงตอบโจทย์นี้ได้ดี มีวัตถุประสงค์อย่างไร และมีขั้นตอนการ Drill Down อย่างไร",
       "ข้อที่ 20 (6 คะแนน) [สถานการณ์ End-to-End Pipeline]: จากสถาปัตยกรรม The Blueprints of Intelligence จงอธิบายการเดินทางของข้อมูลตั้งแต่ต้นทาง (Start: Excel, CSV, Database, Web) ผ่าน Zone 1 (Clean), Zone 2 (Model), Zone 3 (Calculate), Zone 4 (Visualize) จนถึง Finish (Business Decision)"
     ],
+    "written_exam": [
+      {
+        "id": 1,
+        "part": "ส่วนที่ 1: หมวดความรู้และหลักการพื้นฐาน (Conceptual & Principles)",
+        "score": 4,
+        "type": "อัตนัย",
+        "title": "ข้อที่ 1: บทบาทและหน้าที่ของ Data Analyst และ Data Scientist (4 คะแนน)",
+        "question": "ในสายงานด้านข้อมูล จงระบุ 'คำถามหลัก' (Core Question) และ 'บทบาทหน้าที่สำคัญ' อย่างน้อย 2 ประการของทั้ง Data Analyst และ Data Scientist ตามตารางเปรียบเทียบและเนื้อหาในเอกสาร",
+        "answer": "1. Data Analyst (นักวิเคราะห์ข้อมูล):\n   - คำถามหลัก: เกิดอะไรขึ้น?\n   - บทบาทหน้าที่สำคัญ (เลือกตอบอย่างน้อย 2 ข้อ): นำข้อมูลที่มีอยู่มาวิเคราะห์เพื่อค้นหารูปแบบ แนวโน้ม ความสัมพันธ์ และสาเหตุของปัญหาทางธุรกิจ / ทำความสะอาดข้อมูล (Data Cleaning) / วิเคราะห์ข้อมูลด้วยสถิติ / สร้างรายงานและ Dashboard นำเสนอด้วย Visualization / สื่อสารผลการวิเคราะห์ให้ผู้บริหารเข้าใจเพื่อสนับสนุนการตัดสินใจ\n\n2. Data Scientist (นักวิทยาศาสตร์ข้อมูล):\n   - คำถามหลัก: จะเกิดอะไรขึ้น/ควรทำอย่างไร?\n   - บทบาทหน้าที่สำคัญ (เลือกตอบอย่างน้อย 2 ข้อ): วิเคราะห์ข้อมูลเชิงลึก / ค้นหารูปแบบและความสัมพันธ์ที่ซับซ้อน / สร้างแบบจำลองทางสถิติ / สร้าง Machine Learning Model เพื่อพยากรณ์หรือคาดการณ์พฤติกรรมลูกค้า / ประเมินและปรับปรุงประสิทธิภาพแบบจำลอง",
+        "rubric": "- Data Analyst: คำถามหลักถูกต้อง (1 คะแนน), หน้าที่สำคัญอย่างน้อย 2 ประการถูกต้อง (1 คะแนน)\n- Data Scientist: คำถามหลักถูกต้อง (1 คะแนน), หน้าที่สำคัญอย่างน้อย 2 ประการถูกต้อง (1 คะแนน)",
+        "reference": "หน้า 3, 4 และ 5 หัวข้อ 'Data Analyst นักวิเคราะห์ข้อมูล', 'Data Scientist - นักวิทยาศาสตร์ข้อมูล' และ 'เปรียบเทียบ'",
+        "quote": "หน้า 5: 'คำถามหลัก: [Data Analyst] เกิดอะไรขึ้น? | [Data Scientist] จะเกิดอะไรขึ้น/ควรทำอย่างไร?'\nหน้า 3-4: หน้าที่สำคัญของ Data Analyst และ Data Scientist",
+        "code": null
+      },
+      {
+        "id": 2,
+        "part": "ส่วนที่ 1: หมวดความรู้และหลักการพื้นฐาน (Conceptual & Principles)",
+        "score": 4,
+        "type": "อัตนัย",
+        "title": "ข้อที่ 2: บทบาทและหน้าที่ของ Data Engineer (4 คะแนน)",
+        "question": "จงระบุ 'บทบาทหลัก' 'คำถามหลัก' 'ผลลัพธ์ (Output)' และ 'เครื่องมือเด่น' ของ Data Engineer (วิศวกรข้อมูล) ตามที่ระบุในเอกสาร",
+        "answer": "- บทบาทหลัก: “ทำให้ข้อมูลพร้อมใช้งาน” (รับผิดชอบโครงสร้างและกระบวนการจัดการข้อมูล เพื่อให้ข้อมูลจากแหล่งต่าง ๆ ถูกนำมารวม จัดเก็บ และส่งต่อให้ผู้วิเคราะห์นำไปใช้งานได้อย่างมีประสิทธิภาพ)\n- คำถามหลัก: ข้อมูลจะนำมาใช้อย่างไร?\n- ผลลัพธ์ (Output): ข้อมูลพร้อมใช้\n- เครื่องมือเด่น: SQL, Python, ETL, Cloud",
+        "rubric": "- ระบุบทบาทหลักได้ถูกต้องตามใจความ: 1 คะแนน\n- ระบุคำถามหลักได้ถูกต้อง: 1 คะแนน\n- ระบุผลลัพธ์ได้ถูกต้อง: 1 คะแนน\n- ระบุเครื่องมือเด่นถูกต้อง (มี SQL, Python, ETL หรือ Cloud): 1 คะแนน",
+        "reference": "หน้า 2 และหน้า 5 หัวข้อ 'Data Engineer วิศวกรข้อมูล' และ 'เปรียบเทียบ'",
+        "quote": "หน้า 2: 'บทบาทหลัก: “ทำให้ข้อมูลพร้อมใช้งาน” Data Engineer รับผิดชอบโครงสร้างและกระบวนการจัดการข้อมูล เพื่อให้ข้อมูลถูกนำมารวม จัดเก็บ และส่งต่อ...'\nหน้า 5: 'คำถามหลัก: ข้อมูลจะนำมาใช้อย่างไร? | ผลลัพธ์: ข้อมูลพร้อมใช้ | เครื่องมือเด่น: SQL, Python, ETL, Cloud'",
+        "code": null
+      },
+      {
+        "id": 3,
+        "part": "ส่วนที่ 1: หมวดความรู้และหลักการพื้นฐาน (Conceptual & Principles)",
+        "score": 5,
+        "type": "อัตนัย",
+        "title": "ข้อที่ 3: 4 ขั้นตอนหลักของกระบวนการ BI (5 คะแนน)",
+        "question": "สถาปัตยกรรมข้อมูลตาม Business Intelligence Blueprint แบ่งขั้นตอนการทำงานออกเป็น 4 ขั้นตอนหลัก (Clean → Model → Calculate → Visualize) จงอธิบายเป้าหมายและระบุเครื่องมือหรือเทคนิคที่ใช้ในแต่ละขั้นตอนตามเอกสารหน้า 6",
+        "answer": "1. Clean: ทำความสะอาดข้อมูลด้วย Power Query (เตรียมข้อมูลให้พร้อม)\n2. Model: สร้าง Data Model และความสัมพันธ์ (จัดโครงสร้างให้เชื่อมโยง)\n3. Calculate: สร้าง Measure ด้วย DAX (คำนวณตัวชี้วัด)\n4. Visualize: สร้างกราฟและ Dashboard (นำเสนอเพื่อตอบคำถามธุรกิจ)",
+        "rubric": "- อธิบายเป้าหมายและเครื่องมือในแต่ละขั้นตอนถูกต้อง ขั้นตอนละ 1 คะแนน (รวม 4 คะแนน)\n- ระบุลำดับการไหล Clean → Model → Calculate → Visualize ได้ถูกต้อง: 1 คะแนน",
+        "reference": "หน้า 6 หัวข้อ 'Clean → Model → Calculate → Visualize'",
+        "quote": "หน้า 6: '1. Clean — ทำความสะอาดข้อมูลด้วย Power Query (เตรียมข้อมูลให้พร้อม) 2. Model — สร้าง Data Model และความสัมพันธ์ (จัดโครงสร้างให้เชื่อมโยง) 3. Calculate — สร้าง Measure ด้วย DAX (คำนวณตัวชี้วัด) 4. Visualize — สร้างกราฟและ Dashboard (นำเสนอเพื่อตอบคำถามธุรกิจ)'",
+        "code": null
+      },
+      {
+        "id": 4,
+        "part": "ส่วนที่ 1: หมวดความรู้และหลักการพื้นฐาน (Conceptual & Principles)",
+        "score": 6,
+        "type": "อัตนัย",
+        "title": "ข้อที่ 4: มิติของ Data Quality ทั้ง 6 ด้าน (6 คะแนน)",
+        "question": "เป้าหมายหลักของ Data Cleansing คือการมุ่งสู่คุณภาพของข้อมูล (Data Quality) จงระบุชื่อมิติของ Data Quality ทั้ง 6 ด้าน พร้อมความหมายตามเอกสาร",
+        "answer": "1. Accuracy: ข้อมูลถูกต้องแม่นยำ\n2. Completeness: ข้อมูลครบถ้วนไม่แหว่งหาย\n3. Consistency: สอดคล้องเป็นมาตรฐานเดียวกัน\n4. Validity: อยู่ในรูปแบบและโครงสร้างที่ถูกต้อง\n5. Uniqueness: ไม่ซ้ำซ้อนโดยไม่จำเป็น\n6. Timeliness: เป็นข้อมูลที่อัปเดตเหมาะสมกับเวลา\n(ยอมรับทั้งชื่อภาษาอังกฤษเดี่ยวๆ หรือเขียนคู่กับคำอธิบายภาษาไทยตามสไลด์)",
+        "rubric": "ระบุชื่อมิติและความหมายถูกต้อง ครบถ้วน ด้านละ 1 คะแนน (รวม 6 คะแนน) หากเขียนเฉพาะภาษาอังกฤษหรือเฉพาะความหมายภาษาไทยตรงตามสไลด์ อนุโลมให้ข้อละ 1 คะแนน",
+        "reference": "หน้า 7 หัวข้อ 'Data Quality เป้าหมายหลักของ Data Cleansing'",
+        "quote": "หน้า 7: 'Accuracy ข้อมูลถูกต้องแม่นยำ | Completeness ข้อมูลครบถ้วนไม่แหว่งหาย | Consistency สอดคล้องเป็นมาตรฐานเดียวกัน | Validity อยู่ในรูปแบบและโครงสร้างที่ถูกต้อง | Uniqueness ไม่ซ้ำซ้อนโดยไม่จำเป็น | Timeliness เป็นข้อมูลที่อัปเดตเหมาะสมกับเวลา'",
+        "code": null
+      },
+      {
+        "id": 5,
+        "part": "ส่วนที่ 1: หมวดความรู้และหลักการพื้นฐาน (Conceptual & Principles)",
+        "score": 4,
+        "type": "อัตนัย",
+        "title": "ข้อที่ 5: คุณภาพข้อมูลต้นทาง และ Garbage In, Garbage Out (4 คะแนน)",
+        "question": "เอกสารระบุคำเตือนสำคัญเกี่ยวกับคุณภาพของข้อมูลต้นทางก่อนนำไปสร้าง Dashboard ไว้อย่างไร และหลักการนี้สรุปเป็นวลีภาษาอังกฤษว่าอย่างไร",
+        "answer": "- คำเตือน: 'ข้อมูลที่นำมาวิเคราะห์ไม่ได้พร้อมใช้งานทันที ต่อให้สร้าง Dashboard สวยแค่ไหน ถ้าข้อมูลต้นทางผิด ผลการวิเคราะห์ก็ผิด'\n- วลีภาษาอังกฤษ: 'Garbage In, Garbage Out'",
+        "rubric": "- อธิบายใจความคำเตือนว่าถ้าข้อมูลต้นทางผิด ผลการวิเคราะห์หรือ Dashboard ก็จะผิด: 2 คะแนน\n- ระบุวลี 'Garbage In, Garbage Out' ได้ถูกต้อง: 2 คะแนน",
+        "reference": "หน้า 7 แถบข้อความด้านล่าง",
+        "quote": "หน้า 7: 'ข้อมูลที่นำมาวิเคราะห์ไม่ได้พร้อมใช้งานทันที ต่อให้สร้าง Dashboard สวยแค่ไหน ถ้าข้อมูลต้นทางผิด ผลการวิเคราะห์ก็ผิด (Garbage In, Garbage Out)'",
+        "code": null
+      },
+      {
+        "id": 6,
+        "part": "ส่วนที่ 1: หมวดความรู้และหลักการพื้นฐาน (Conceptual & Principles)",
+        "score": 5,
+        "type": "อัตนัย",
+        "title": "ข้อที่ 6: นิยาม Data Model และ Flat Table vs Data Model (5 คะแนน)",
+        "question": "จงระบุนิยามของ 'Data Model (แบบจำลองข้อมูล)' และเปรียบเทียบข้อจำกัดของ 'ตารางเดียวแบบ Excel (Flat Table)' กับข้อดีของ 'โครงสร้างแบบความสัมพันธ์ (Data Model)'",
+        "answer": "1. นิยาม Data Model: คือการนำตารางข้อมูลที่ผ่านการทำความสะอาดแล้วมาจัดโครงสร้างและสร้างความสัมพันธ์ระหว่างตาราง เพื่อให้สามารถวิเคราะห์ข้อมูลจากหลายตารางร่วมกันได้อย่างถูกต้อง\n2. ข้อจำกัดของ Flat Table: ข้อมูลลูกค้าและสินค้าถูกเก็บซ้ำหลายครั้ง สิ้นเปลืองพื้นที่และอัปเดตยาก\n3. ข้อดีของ Data Model: เก็บรายละเอียดลูกค้าและสินค้าไว้ที่เดียว แล้วเชื่อมโยงด้วย ID ลดความซ้ำซ้อนและวิเคราะห์ข้ามมิติได้",
+        "rubric": "- นิยาม Data Model ถูกต้องครบถ้วน: 2 คะแนน\n- ระบุข้อจำกัดของ Flat Table ได้ถูกต้อง: 1.5 คะแนน\n- ระบุข้อดีของ Data Model ได้ถูกต้อง: 1.5 คะแนน",
+        "reference": "หน้า 10 และหน้า 14 หัวข้อ 'การสร้าง Data Model' และ 'Blueprints of Intelligence'",
+        "quote": "หน้า 10: 'Data Model (แบบจำลองข้อมูล) คือ การนำตารางข้อมูลที่ผ่านการ ทำความสะอาดแล้วมาจัดโครงสร้างและสร้างความสัมพันธ์ระหว่างตาราง เพื่อให้สามารถวิเคราะห์ข้อมูลจากหลายตารางร่วมกันได้อย่างถูกต้อง'\nหน้า 14: ข้อความเปรียบเทียบ Flat Table กับ Data Model",
+        "code": null
+      },
+      {
+        "id": 7,
+        "part": "ส่วนที่ 1: หมวดความรู้และหลักการพื้นฐาน (Conceptual & Principles)",
+        "score": 5,
+        "type": "อัตนัย",
+        "title": "ข้อที่ 7: โครงสร้าง Star Schema: Fact Table vs Dimension Table (5 คะแนน)",
+        "question": "ในการจัดโครงสร้างแบบ Star Schema จงอธิบายความแตกต่างระหว่าง 'Fact Table' และ 'Dimension Table' พร้อมทั้งยกตัวอย่างข้อมูลหรือชื่อตารางที่จัดอยู่ในแต่ละประเภท",
+        "answer": "1. Fact Table: เป็นตารางที่เก็บ 'เหตุการณ์หรือรายการธุรกรรม' (บันทึกสิ่งที่เกิดขึ้น เช่น ตัวเลขเชิงปริมาณ) ตัวอย่าง: Sales, Orders, Transactions, Attendance หรือข้อมูล Quantity, Amount, Cost, Discount, Profit\n2. Dimension Table: เป็นตารางที่ใช้ 'อธิบายรายละเอียดของ Fact' ตัวอย่าง: Customer, Product, Date, Branch, Employee\n(สรุป: Dimension อธิบายรายละเอียด — Fact บันทึกสิ่งที่เกิดขึ้น)",
+        "rubric": "- อธิบายความหมายและหน้าที่ของ Fact Table (1.5 คะแนน) พร้อมตัวอย่าง (1 คะแนน)\n- อธิบายความหมายและหน้าที่ของ Dimension Table (1.5 คะแนน) พร้อมตัวอย่าง (1 คะแนน)",
+        "reference": "หน้า 12 และหน้า 15 หัวข้อ 'โครงสร้างที่แนะนำ: Star Schema ประกอบด้วย'",
+        "quote": "หน้า 12: '1. Fact Table เป็นตารางที่เก็บ เหตุการณ์หรือรายการธุรกรรม | 2. Dimension Table เป็นตารางที่ใช้ อธิบายรายละเอียดของ Fact'\nหน้า 15: 'Dimension อธิบายรายละเอียด — Fact บันทึกสิ่งที่เกิดขึ้น'",
+        "code": null
+      },
+      {
+        "id": 8,
+        "part": "ส่วนที่ 1: หมวดความรู้และหลักการพื้นฐาน (Conceptual & Principles)",
+        "score": 4,
+        "type": "อัตนัย",
+        "title": "ข้อที่ 8: Cardinality และการแก้ปัญหา Many-to-Many ด้วย Bridge Table (4 คะแนน)",
+        "question": "ในการสร้าง Relationship ระหว่างตาราง รูปแบบใดเป็น 'รูปแบบที่สำคัญที่สุดใน Data Model' และหากพบความสัมพันธ์แบบ Many-to-Many (*:*) เอกสารให้คำแนะนำหรือทางออก (Solution) ในการออกแบบไว้อย่างไร",
+        "answer": "1. รูปแบบที่สำคัญที่สุด: One-to-Many (1:*) (หนึ่งรายการใน Dimension เชื่อมกับหลายรายการใน Fact)\n2. ทางออกสำหรับ Many-to-Many: ควรสร้าง 'ตารางกลาง' (Bridge Table) เพื่อจัดการความสัมพันธ์ให้ถูกต้อง/เหมาะสม แทนการใช้ Many-to-Many โดยตรงเมื่อสามารถออกแบบได้\n(ยอมรับทั้ง 'ควรสร้างตารางกลาง (Bridge Table)' ตามหน้า 16 หรือ 'ควรพิจารณาสร้างตารางกลาง (Bridge Table) เพื่อจัดการความสัมพันธ์ให้เหมาะสมแทนการใช้ Many-to-Many โดยตรงเมื่อสามารถออกแบบแบบนั้นได้' ตามหน้า 13)",
+        "rubric": "- ระบุ One-to-Many (1:*) ถูกต้อง: 2 คะแนน\n- ระบุการสร้างตารางกลาง (Bridge Table) เพื่อจัดการความสัมพันธ์: 2 คะแนน",
+        "reference": "หน้า 13 และหน้า 16 หัวข้อ 'สร้าง Relationship' และ 'Cardinality & Relationships'",
+        "quote": "หน้า 13: '1:* — One-to-Many รูปแบบนี้เป็นรูปแบบสำคัญที่สุด... | กรณีนี้ควรพิจารณาสร้าง ตารางกลาง (Bridge Table)...'\nหน้า 16: 'Warning: Many-to-Many (*:*) ... Solution: ควรสร้าง “ตารางกลาง” (Bridge Table)'",
+        "code": null
+      },
+      {
+        "id": 9,
+        "part": "ส่วนที่ 1: หมวดความรู้และหลักการพื้นฐาน (Conceptual & Principles)",
+        "score": 4,
+        "type": "อัตนัย",
+        "title": "ข้อที่ 9: ทิศทางการกรองข้อมูล (Cross-filter direction) (4 คะแนน)",
+        "question": "ในโมเดลความสัมพันธ์แบบ One-to-Many (1:*) ทิศทางการกรองข้อมูล (Cross-filter direction) ตามแบบจำลองที่ถูกต้องจะไหลไปในทิศทางใด และจงยกตัวอย่างการเชื่อมโยงจากตาราง Dimension ไปยัง Fact ที่แสดงในเอกสาร",
+        "answer": "- ทิศทางการกรองข้อมูล: ไหลจาก Dimension (1) ไปยัง Fact (*)\n- ตัวอย่างการเชื่อมโยง: จากลูกค้า 1 คน Customer C001 (ฝั่ง Dimension 1 รายการ) กรองไปยังรายการขายของลูกค้านั้นในตาราง Sales ที่มีได้หลายรายการ เช่น S001, S003, S015 (ฝั่ง Fact หลายรายการ)",
+        "rubric": "- ระบุทิศทางจาก Dimension (1) ไป Fact (*) ได้ถูกต้อง: 2 คะแนน\n- ยกตัวอย่างการเชื่อมโยงลูกค้ากับยอดขาย (Customer → Sales) ตามเอกสารได้ถูกต้อง: 2 คะแนน",
+        "reference": "หน้า 16 หัวข้อ 'Cross-filter direction'",
+        "quote": "หน้า 16: 'Cross-filter direction: ทิศทางการกรองข้อมูลจะไหลจาก Dimension (1) ไปยัง Fact (*) | Customer: C001 (1) เชื่อมโยงไปยัง Many Sales: S001, S003, S015 (*)'",
+        "code": null
+      },
+      {
+        "id": 10,
+        "part": "ส่วนที่ 1: หมวดความรู้และหลักการพื้นฐาน (Conceptual & Principles)",
+        "score": 4,
+        "type": "อัตนัย",
+        "title": "ข้อที่ 10: บทบาทของ DAX และปรัชญา Data Visualization (4 คะแนน)",
+        "question": "ในขั้นตอนการสร้าง Business Intelligence (1) ภาษา DAX ถูกนำมาใช้ทำหน้าที่อะไร และ (2) เอกสารระบุ 'หลักการสำคัญในการเลือกกราฟ' สำหรับ Data Visualization ไว้อย่างไร",
+        "answer": "1. หน้าที่ของ DAX: ใช้สร้าง Measure เพื่อการคำนวณตัวชี้วัดทางธุรกิจ\n2. หลักการสำคัญในการเลือกกราฟ: “ไม่ได้เลือกกราฟจากความสวย แต่เลือกจากคำถามที่ต้องการตอบ” (โดย Data Visualization ที่ดีไม่ใช่ศิลปะเพื่อความงาม แต่เป็นเครื่องมือสำหรับแก้ปัญหาธุรกิจ)",
+        "rubric": "- ระบุหน้าที่ของ DAX (สร้าง Measure / คำนวณตัวชี้วัด): 2 คะแนน\n- ระบุหลักการเลือกกราฟ (ไม่ได้เลือกจากความสวย แต่เลือกจากคำถามที่ต้องการตอบ): 2 คะแนน",
+        "reference": "หน้า 6, หน้า 10, หน้า 17 และหน้า 23",
+        "quote": "หน้า 6: 'Calculate: สร้าง Measure ด้วย DAX (คำนวณตัวชี้วัด)'\nหน้า 17: 'ไม่ได้เลือกกราฟจากความสวย แต่เลือกจากคำถามที่ต้องการตอบ • Data Visualization ที่ดีไม่ใช่ศิลปะเพื่อความงาม แต่เป็นเครื่องมือสำหรับแก้ปัญหาธุรกิจ'",
+        "code": null
+      },
+      {
+        "id": 11,
+        "part": "ส่วนที่ 2: หมวดสถานการณ์ การวิเคราะห์ และการคำนวณประยุกต์ (Scenario-based & Calculation)",
+        "score": 6,
+        "type": "ข้อคำนวณ",
+        "title": "ข้อที่ 11: การคำนวณยอดขายจากตาราง Sales ใน Data Model (6 คะแนน)",
+        "question": "จากตารางการขาย (Sales) ในเอกสารหน้า 11 และ 12 ที่บันทึกรายการดังนี้:\n• รายการ S001: Date = 1/10/69, Customer ID = C001, Product ID = P001, Quantity = 2, Amount = 120\n• รายการ S002: Date = 1/10/69, Customer ID = C002, Product ID = P002, Quantity = 3, Amount = 150\n• รายการ S003: Date = 2/10/69, Customer ID = C001, Product ID = P003, Quantity = 1, Amount = 80\n\nจงแสดงขั้นตอนการคำนวณและหาคำตอบต่อไปนี้:\n1. ยอดขายรวมทั้งหมด (Total Amount)\n2. ยอดขายรวมเฉพาะของลูกค้า รหัส C001 (สมชาย)\n3. จำนวนชิ้นสินค้ารวมทั้งหมด (Total Quantity)",
+        "answer": "ขั้นตอนการคำนวณ:\n1. ยอดขายรวมทั้งหมด = 120 + 150 + 80 = 350 บาท\n2. ยอดขายเฉพาะลูกค้า C001 = รายการ S001 (120) + รายการ S003 (80) = 120 + 80 = 200 บาท\n3. จำนวนชิ้นสินค้ารวมทั้งหมด = 2 + 3 + 1 = 6 ชิ้น\n\nคำตอบที่ยอมรับ:\n- ข้อ 1: 350 หรือ 350 บาท\n- ข้อ 2: 200 หรือ 200 บาท\n- ข้อ 3: 6 หรือ 6 ชิ้น",
+        "rubric": "- แสดงขั้นตอนและคำตอบข้อ 1 ถูกต้อง: 2 คะแนน\n- แสดงขั้นตอนและคำตอบข้อ 2 ถูกต้อง: 2 คะแนน\n- แสดงขั้นตอนและคำตอบข้อ 3 ถูกต้อง: 2 คะแนน",
+        "reference": "หน้า 11 และหน้า 12 ตาราง 'Sales'",
+        "quote": "หน้า 11-12: ตาราง Sales แสดง S001 (Amount 120, Qty 2), S002 (Amount 150, Qty 3), S003 (Amount 80, Qty 1)",
+        "code": "sales_data = [\n    {\"SaleID\": \"S001\", \"CustomerID\": \"C001\", \"Quantity\": 2, \"Amount\": 120},\n    {\"SaleID\": \"S002\", \"CustomerID\": \"C002\", \"Quantity\": 3, \"Amount\": 150},\n    {\"SaleID\": \"S003\", \"CustomerID\": \"C001\", \"Quantity\": 1, \"Amount\": 80},\n]\ntotal_amount = sum(item[\"Amount\"] for item in sales_data)\nc001_amount = sum(item[\"Amount\"] for item in sales_data if item[\"CustomerID\"] == \"C001\")\ntotal_qty = sum(item[\"Quantity\"] for item in sales_data)\n\nassert total_amount == 350\nassert c001_amount == 200\nassert total_qty == 6"
+      },
+      {
+        "id": 12,
+        "part": "ส่วนที่ 2: หมวดสถานการณ์ การวิเคราะห์ และการคำนวณประยุกต์ (Scenario-based & Calculation)",
+        "score": 6,
+        "type": "วิเคราะห์สถานการณ์",
+        "title": "ข้อที่ 12: สถานการณ์ Data Cleansing 1 (Rename, Duplicate, Null) (6 คะแนน)",
+        "question": "ในการนำเข้าข้อมูลลูกค้าเข้าสู่ Power Query นักศึกษาพบปัญหาข้อมูลผิดปกติดังต่อไปนี้ จงระบุคำสั่งหรือเครื่องมือแก้ไขใน Power Query พร้อมข้อควรระวัง (ถ้ามี) ตามที่เอกสารกำหนด:\n1. คอลัมน์รหัสลูกค้าของตารางหนึ่งตั้งชื่อว่า Customer_ID แต่อีกตารางหนึ่งตั้งชื่อว่า ID_Customer\n2. พบรายการข้อมูลของลูกค้า C001 สมชาย ซ้ำกัน 3 บรรทัดโดยไม่มีสาเหตุ\n3. พบคอลัมน์จังหวัดมีค่าว่างหรือสูญหาย เช่น C002 สมหญิง null",
+        "answer": "1. ชื่อคอลัมน์ไม่เหมือนกัน: ใช้คำสั่ง Rename Columns\n2. ข้อมูลซ้ำ (Duplicate): ใช้คำสั่ง Remove Duplicates โดยมีข้อควรระวังคือ 'ต้องระวังแยกระหว่างข้อมูลซ้ำที่ผิดพลาดกับ Transaction จริง'\n3. ข้อมูลสูญหาย (Null/Missing): ใช้คำสั่ง Replace Values เปลี่ยนเป็น 'ไม่ระบุ' หรือหาข้อมูลมาเติม",
+        "rubric": "- ข้อ 1 ระบุ Rename Columns ถูกต้อง: 2 คะแนน\n- ข้อ 2 ระบุ Remove Duplicates (1 คะแนน) พร้อมข้อควรระวังเรื่องแยกข้อมูลซ้ำกับ Transaction จริง (1 คะแนน): รวม 2 คะแนน\n- ข้อ 3 ระบุ Replace Values เป็น 'ไม่ระบุ' หรือหาข้อมูลมาเติม ถูกต้อง: 2 คะแนน",
+        "reference": "หน้า 8 ตาราง 'Blueprints of Intelligence'",
+        "quote": "หน้า 8: 'ชื่อคอลัมน์ไม่เหมือนกัน | Customer_ID vs ID_Customer | ใช้คำสั่ง Rename Columns'\n'ข้อมูลซ้ำ (Duplicate) | ใช้ Remove Duplicates (ต้องระวังแยกระหว่างข้อมูลซ้ำที่ผิดพลาดกับ Transaction จริง)'\n'ข้อมูลสูญหาย (Null/Missing) | ใช้ Replace Values เป็น \"ไม่ระบุ\" หรือหาข้อมูลมาเติม'",
+        "code": null
+      },
+      {
+        "id": 13,
+        "part": "ส่วนที่ 2: หมวดสถานการณ์ การวิเคราะห์ และการคำนวณประยุกต์ (Scenario-based & Calculation)",
+        "score": 6,
+        "type": "วิเคราะห์สถานการณ์",
+        "title": "ข้อที่ 13: สถานการณ์ Data Cleansing 2 (Format, Unit, Currency) (6 คะแนน)",
+        "question": "หากฝ่ายขายส่งไฟล์ข้อมูลมาแล้วพบปัญหาความไม่เป็นมาตรฐาน 3 กรณีต่อไปนี้ จงระบุเครื่องมือหรือแนวทางแก้ไขใน Power Query ตามเอกสารหน้า 9:\n1. รูปแบบตัวอักษรไม่สม่ำเสมอ เช่น SOMCHAI ปะปนกับ somchai\n2. บันทึกน้ำหนักสินค้ามาคนละหน่วย เช่น 10 kg ปะปนกับ 10,000 g และ 22.05 lb\n3. บันทึกยอดขายมาคนละสกุลเงิน เช่น ฿100,000 ปะปนกับ $3,000",
+        "answer": "1. รูปแบบข้อความไม่สม่ำเสมอ: ใช้คำสั่ง Transform → Format (Trim ตัดช่องว่าง, Clean, Uppercase)\n2. หน่วยไม่เหมือนกัน: กำหนด Standard Unit และแปลงด้วยสูตรคณิตศาสตร์\n3. สกุลเงินไม่เหมือนกัน: อ้างอิง อัตราแลกเปลี่ยน (Exchange Rate) ก่อนนำมาคำนวณรวม",
+        "rubric": "- แก้รูปแบบข้อความด้วย Transform → Format (Trim, Clean, Uppercase): 2 คะแนน\n- แก้หน่วยด้วย Standard Unit และแปลงด้วยสูตรคณิตศาสตร์: 2 คะแนน\n- แก้สกุลเงินด้วยการอ้างอิงอัตราแลกเปลี่ยน (Exchange Rate): 2 คะแนน",
+        "reference": "หน้า 9 ตาราง 'Blueprints of Intelligence'",
+        "quote": "หน้า 9: 'รูปแบบข้อความไม่สม่ำเสมอ | SOMCHAI vs somchai | ใช้ Transform → Format (Trim ตัดช่องว่าง, Clean, Uppercase)'\n'หน่วยไม่เหมือนกัน | 10 kg vs 10,000 g vs 22.05 lb | กำหนด Standard Unit และแปลงด้วยสูตรคณิตศาสตร์'\n'สกุลเงินไม่เหมือนกัน | ฿100,000 vs $3,000 | อ้างอิง อัตราแลกเปลี่ยน (Exchange Rate) ก่อนนำมาคำนวณรวม'",
+        "code": null
+      },
+      {
+        "id": 14,
+        "part": "ส่วนที่ 2: หมวดสถานการณ์ การวิเคราะห์ และการคำนวณประยุกต์ (Scenario-based & Calculation)",
+        "score": 5,
+        "type": "วิเคราะห์สถานการณ์",
+        "title": "ข้อที่ 14: สถานการณ์ Data Cleansing 3 (Data Type, Mapping, Validation) (5 คะแนน)",
+        "question": "หากพบปัญหาข้อมูล 3 กรณีต่อไปนี้ จงระบุเครื่องมือหรือแนวทางแก้ไขใน Power Query ตามเอกสาร:\n1. คอลัมน์วันที่ถูกบันทึกมาคนละรูปแบบและชนิดข้อมูลไม่ตรงกัน เช่น 08/10/2026 vs 2569-10-08\n2. ข้อมูลชื่อจังหวัดสะกดไม่เหมือนกัน เช่น ภูเกต vs ภูเก๊ต vs Phuket (หรือ Phuket vs ภูเก็ต vs จ.ภูเก็ต)\n3. ข้อมูลอายุลูกค้าบันทึกผิดปกติเป็น -5 ปี หรือ 250 ปี",
+        "answer": "1. ชนิดข้อมูลไม่ตรงกัน: ใช้คำสั่ง Transform → Data Type (เช่น Text, Date, Decimal)\n2. ข้อมูลสะกด/รูปแบบไม่เหมือนกัน: สร้าง Reference / Mapping Table เพื่อจับคู่กับ Standard Province (หรือใช้ Replace Values หรือสร้าง Mapping Table)\n3. ข้อมูลไม่สมเหตุสมผล: กำหนด Data Validation / Business Rules (เช่น อายุต้องอยู่ระหว่าง 0–120 ปี)",
+        "rubric": "- ข้อ 1 ระบุ Transform → Data Type: 1.5 คะแนน\n- ข้อ 2 ระบุ Mapping Table / Reference หรือ Replace Values: 2 คะแนน\n- ข้อ 3 ระบุ Data Validation / Business Rules: 1.5 คะแนน",
+        "reference": "หน้า 8 และหน้า 9 ตาราง 'Blueprints of Intelligence'",
+        "quote": "หน้า 8: 'ชนิดข้อมูลไม่ตรงกัน | ใช้ Transform → Data Type'\nหน้า 8-9: 'ภูเกต vs ภูเก๊ต vs Phuket | สร้าง Reference / Mapping Table เพื่อจับคู่กับ Standard Province'\nหน้า 9: 'ข้อมูลไม่สมเหตุสมผล | กำหนด Data Validation / Business Rules'",
+        "code": null
+      },
+      {
+        "id": 15,
+        "part": "ส่วนที่ 2: หมวดสถานการณ์ การวิเคราะห์ และการคำนวณประยุกต์ (Scenario-based & Calculation)",
+        "score": 5,
+        "type": "วิเคราะห์สถานการณ์",
+        "title": "ข้อที่ 15: สถานการณ์ Data Modeling (แยก Fact vs Dimension และคีย์เชื่อมโยง) (5 คะแนน)",
+        "question": "บริษัทแห่งหนึ่งมีชุดตารางข้อมูล 5 ตาราง ได้แก่ Sales, Customer, Product, Branch, และ Date จงจำแนกว่าตารางใดควรเป็น Fact Table และตารางใดควรเป็น Dimension Table ตามสถาปัตยกรรม Star Schema ในเอกสาร พร้อมระบุว่าตาราง Sales สามารถเชื่อมโยงกับตารางอื่นด้วย ID หรือคีย์ใดได้บ้าง",
+        "answer": "1. Fact Table: ตาราง Sales (เป็นตารางบันทึกธุรกรรมยอดขาย)\n2. Dimension Tables: ตาราง Customer, Product, Branch, และ Date (เป็นตารางอธิบายรายละเอียด)\n3. การเชื่อมโยง: ตาราง Sales เชื่อมโยงผ่าน:\n   - CustomerID ไปยังตาราง Customer\n   - ProductID ไปยังตาราง Product\n   - BranchID ไปยังตาราง Branch\n   - Date ไปยังตาราง Date",
+        "rubric": "- จำแนก Fact Table ได้ถูกต้อง: 1.5 คะแนน\n- จำแนก Dimension Table ครบทั้ง 4 ตาราง: 1.5 คะแนน\n- ระบุฟิลด์เชื่อมโยง (CustomerID, ProductID, BranchID, Date) ได้ถูกต้อง: 2 คะแนน",
+        "reference": "หน้า 12, 14 และหน้า 15 ภาพ 'Star Schema'",
+        "quote": "หน้า 15: 'Fact Table (ตารางธุรกรรม): Sales (ยอดขาย) | Dimension Table: Branch (BranchID, Location), Customer (CustomerID, Name, Province), Product (ProductID, Category, Price), Date (Date, Month, Quarter, Year)'",
+        "code": null
+      },
+      {
+        "id": 16,
+        "part": "ส่วนที่ 2: หมวดสถานการณ์ การวิเคราะห์ และการคำนวณประยุกต์ (Scenario-based & Calculation)",
+        "score": 5,
+        "type": "วิเคราะห์สถานการณ์",
+        "title": "ข้อที่ 16: สถานการณ์เลือกวิชวล 1 (Card, Bar, Line, Table) (5 คะแนน)",
+        "question": "ผู้บริหารมอบหมายให้จัดทำ Dashboard แสดงผล โดยมีโจทย์คำถามทางธุรกิจ 4 ข้อต่อไปนี้ จงเลือกประเภทกราฟ/วิชวลที่เหมาะสมที่สุดตามเอกสารหน้า 18:\n1. 'ในปัจจุบันยอดขายรวมและกำไรรวมของบริษัทเป็นตัวเลขเท่าไร?'\n2. 'สินค้าชนิดใดขายดีที่สุด และแต่ละสาขามียอดขายเท่าไรเมื่อนำมาเปรียบเทียบกัน?'\n3. 'แนวโน้มยอดขายในช่วง 12 เดือนที่ผ่านมา มีทิศทางเพิ่มขึ้นหรือลดลง?'\n4. 'ต้องการดูรายละเอียดเชิงลึกของยอดขายแต่ละสินค้าโดยแจกแจงแยกตามรายจังหวัดข้ามหลายมิติ'",
+        "answer": "1. ตอบ: Card / KPI (หรือ Card)\n2. ตอบ: Bar / Column Chart (หรือ Bar Chart)\n3. ตอบ: Line Chart\n4. ตอบ: Table / Matrix",
+        "rubric": "ตอบถูกต้องข้อละ 1.25 คะแนน (รวม 5 คะแนน)",
+        "reference": "หน้า 18 หัวข้อ 'Blueprints of Intelligence'",
+        "quote": "หน้า 18: 'Card / KPI: ตัวเลขสำคัญเพียง 1–ไม่กี่ค่า | Bar / Column Chart: เปรียบเทียบค่าระหว่างหมวดหมู่ | Line Chart: แนวโน้มและการเปลี่ยนแปลงตามเวลา | Table / Matrix: รายละเอียดข้อมูลจำนวนมากข้ามหลายมิติ'",
+        "code": null
+      },
+      {
+        "id": 17,
+        "part": "ส่วนที่ 2: หมวดสถานการณ์ การวิเคราะห์ และการคำนวณประยุกต์ (Scenario-based & Calculation)",
+        "score": 5,
+        "type": "วิเคราะห์สถานการณ์",
+        "title": "ข้อที่ 17: สถานการณ์เลือกวิชวล 2 (Scatter, Donut, Treemap, Map) (5 คะแนน)",
+        "question": "ฝ่ายการตลาดต้องการวิเคราะห์ข้อมูลด้วยกราฟ 4 ลักษณะ จงจับคู่ประเภทกราฟต่อไปนี้ (Pie/Donut Chart, Scatter Chart, Map, Treemap) ให้ตรงกับคำถามทางธุรกิจตามเอกสารหน้า 19:\n1. 'งบประมาณโฆษณาที่ใช้ไปมีความสัมพันธ์กับยอดขายที่ได้รับกลับมาหรือไม่?'\n2. 'ยอดขายแต่ละประเภทคิดเป็นกี่เปอร์เซ็นต์ (%) ของยอดขายทั้งหมด?'\n3. 'กลุ่มสินค้าใดสร้างรายได้กินพื้นที่สัดส่วนมากที่สุดเมื่อเปรียบเทียบขนาดของหลายหมวดหมู่?'\n4. 'จังหวัดหรือภูมิภาคใดในประเทศไทยมียอดขายสูงที่สุดตามตำแหน่งทางภูมิศาสตร์?'",
+        "answer": "1. ตอบ: Scatter Chart\n2. ตอบ: Pie / Donut Chart (หรือ Donut Chart)\n3. ตอบ: Treemap\n4. ตอบ: Map",
+        "rubric": "ตอบถูกต้องข้อละ 1.25 คะแนน (รวม 5 คะแนน)",
+        "reference": "หน้า 19 หัวข้อ 'Blueprints of Intelligence'",
+        "quote": "หน้า 19: 'Pie / Donut Chart: สัดส่วนของส่วนต่าง ๆ ต่อทั้งหมด | Scatter Chart: ความสัมพันธ์ระหว่างตัวแปร 2 ตัว | Treemap: เปรียบเทียบขนาดของหลายหมวดหมู่ | Map: ข้อมูลที่มีตำแหน่งทางภูมิศาสตร์'",
+        "code": null
+      },
+      {
+        "id": 18,
+        "part": "ส่วนที่ 2: หมวดสถานการณ์ การวิเคราะห์ และการคำนวณประยุกต์ (Scenario-based & Calculation)",
+        "score": 5,
+        "type": "วิเคราะห์สถานการณ์",
+        "title": "ข้อที่ 18: สถานการณ์เลือกวิชวล 3 (Funnel, Waterfall, Gauge, Ribbon) (5 คะแนน)",
+        "question": "จงจับคู่กราฟเฉพาะทาง 4 ประเภท (Funnel Chart, Gauge / KPI, Waterfall Chart, Ribbon Chart) เข้ากับสถานการณ์ทางธุรกิจตามเอกสารหน้า 20:\n1. ธุรกิจร้านค้าออนไลน์ต้องการวิเคราะห์ว่าลูกค้าหลุดหายไปในขั้นตอนใด ตั้งแต่เริ่มสนใจ → หยิบลงตะกร้า → ชำระเงิน\n2. ฝ่ายการเงินต้องการแสดงการเพิ่ม-ลดของมูลค่า โดยเริ่มจากรายได้ หักต้นทุน หักค่าใช้จ่าย จนเหลือเป็นกำไรสุทธิสุดท้าย\n3. ฝ่ายขายต้องการมอนิเตอร์ว่ายอดขายจริงที่ทำได้ในปัจจุบัน คิดเป็นกี่เปอร์เซ็นต์ของเป้าหมายยอดขายประจำปีที่กำหนดไว้\n4. ฝ่ายผลิตภัณฑ์ต้องการติดตามอันดับสินค้าว่าสินค้าใดมีอันดับความนิยมขึ้นหรือตกในแต่ละเดือนตามลำดับเวลา",
+        "answer": "1. ตอบ: Funnel Chart\n2. ตอบ: Waterfall Chart\n3. ตอบ: Gauge / KPI (หรือ Gauge)\n4. ตอบ: Ribbon Chart",
+        "rubric": "ตอบถูกต้องข้อละ 1.25 คะแนน (รวม 5 คะแนน)",
+        "reference": "หน้า 20 หัวข้อ 'Blueprints of Intelligence'",
+        "quote": "หน้า 20: 'Funnel Chart: ข้อมูลที่มีลำดับขั้นตอน (Conversion) | Waterfall Chart: แสดงการเพิ่ม-ลดของค่า (บวก/ลบ) | Gauge / KPI: เปรียบเทียบค่าปัจจุบันกับเป้าหมาย | Ribbon Chart: การเปลี่ยนอันดับตามเวลา'",
+        "code": null
+      },
+      {
+        "id": 19,
+        "part": "ส่วนที่ 2: หมวดสถานการณ์ การวิเคราะห์ และการคำนวณประยุกต์ (Scenario-based & Calculation)",
+        "score": 6,
+        "type": "วิเคราะห์สถานการณ์",
+        "title": "ข้อที่ 19: สถานการณ์ Decomposition Tree และ Root Cause Analysis (6 คะแนน)",
+        "question": "ผู้บริหารพบปัญหาว่า 'ยอดขายรวมในไตรมาสนี้ลดลงอย่างมาก' และต้องการค้นหาสาเหตุที่แท้จริง\n1. จงอธิบายว่าทำไมกราฟ Decomposition Tree จึงตอบโจทย์ปัญหานี้ได้ดี และมีวัตถุประสงค์หลักในการวิเคราะห์อย่างไร\n2. จากตัวอย่างในเอกสารหน้า 21 จงระบุลำดับขั้นตอนการแยกย่อย (Drill Down) เพื่อเจาะหาสาเหตุของปัญหา",
+        "answer": "1. วัตถุประสงค์: ใช้สำหรับการวิเคราะห์เจาะลึก (Drill Down) เพื่อค้นหาสาเหตุที่แท้จริงของปัญหา (Root Cause Analysis) ช่วยให้ผู้บริหารคลิกเจาะดูได้ทันทีว่าปัญหาเกิดจากจุดใด\n2. ลำดับขั้นตอนการ Drill Down:\n   - ตามสไลด์ตัวอย่าง: ยอดขายรวม (Total Sales) → แยกตาม 'จังหวัด' (Province) → แยกตาม 'สาขา' (Branch) → แยกตาม 'ประเภทสินค้า' (Category) → 'สินค้า' (Product)\n   (เกณฑ์ความยืดหยุ่นเชิงวิเคราะห์: หากผู้เรียนเสนอการ Drill Down ในลำดับมิติอื่นที่สมเหตุสมผล เช่น เจาะตามประเภทสินค้าก่อน แล้วตามด้วยสาขาหรือจังหวัด ให้ถือว่าถูกต้องและได้คะแนนเต็มเช่นกัน เนื่องจากในเครื่องมือจริงสามารถเลือกสลับมิติการ Drill Down ได้อย่างอิสระตามคำถามธุรกิจ)",
+        "rubric": "- อธิบายวัตถุประสงค์ (เจาะลึก / Drill Down / Root Cause Analysis / ค้นหาสาเหตุที่แท้จริง): 3 คะแนน\n- ระบุลำดับการแตกกิ่งมิติที่สมเหตุสมผล (หรือระบุตามสไลด์ จังหวัด → สาขา → ประเภทสินค้า → สินค้า): 3 คะแนน",
+        "reference": "หน้า 21 หัวข้อ 'Deep Dive: The Decomposition Tree'",
+        "quote": "หน้า 21: 'วัตถุประสงค์: วิเคราะห์เจาะลึก (Drill Down) เพื่อค้นหาสาเหตุที่แท้จริงของปัญหา (Root Cause Analysis)'\n'ยอดขายรวม (Total Sales) → แยกตาม ‘จังหวัด’ → แยกตาม ‘สาขา’ → แยกตาม ‘ประเภทสินค้า’ → ‘สินค้า’'",
+        "code": null
+      },
+      {
+        "id": 20,
+        "part": "ส่วนที่ 2: หมวดสถานการณ์ การวิเคราะห์ และการคำนวณประยุกต์ (Scenario-based & Calculation)",
+        "score": 6,
+        "type": "วิเคราะห์สถานการณ์",
+        "title": "ข้อที่ 20: สถานการณ์ End-to-End Pipeline และการตัดสินใจทางธุรกิจ (6 คะแนน)",
+        "question": "จากภาพสถาปัตยกรรม 'The Blueprints of Intelligence' และผังกระบวนการในเอกสารหน้า 23 และ 24 จงอธิบายการเดินทางของข้อมูลตั้งแต่ต้นทาง (Start) ผ่านทั้ง 4 โซน ไปจนถึงปลายทาง (Finish) ให้เห็นภาพรวมของระบบ BI ครบวงจร",
+        "answer": "- Start (แหล่งข้อมูลนำเข้า): ข้อมูลดิบจากแหล่งต่างๆ ได้แก่ Excel, CSV, Database และ Web\n- Zone 1 (Clean): นำข้อมูลเข้าสู่ Power Query เพื่อทำ Data Cleansing & Data Transformation (ทำความสะอาดและแปลงรูปข้อมูล)\n- Zone 2 (Model): เข้าสู่ Model View เพื่อสร้าง Data Model และกำหนดความสัมพันธ์ (Relationship) แบบ Star Schema (แยก Dimension และ Fact)\n- Zone 3 (Calculate): ใช้ภาษา DAX สร้าง Measure เพื่อการคำนวณตัวชี้วัดทางธุรกิจ\n- Zone 4 (Visualize): ออกแบบสร้างกราฟและ Dashboard เพื่อตอบคำถามทางธุรกิจอย่างตรงจุด\n- Finish: Business Decision นำสารสนเทศไปสู่การตัดสินใจทางธุรกิจที่แม่นยำ",
+        "rubric": "- ระบุ Start ถูกต้อง (Excel, CSV, Database, Web): 1 คะแนน\n- อธิบาย Zone 1 ถึง Zone 4 พร้อมเครื่องมือและบทบาท โซนละ 1 คะแนน (รวม 4 คะแนน)\n- ระบุ Finish ถูกต้อง (Business Decision / การตัดสินใจทางธุรกิจ): 1 คะแนน",
+        "reference": "หน้า 23 และหน้า 24 ภาพ 'The Blueprints of Intelligence'",
+        "quote": "หน้า 23-24: 'Start: ข้อมูลดิบ → Zone 1 (Clean): Power Query → Zone 2 (Model): Star Schema → Zone 3 (Calculate): DAX → Zone 4 (Visualize): Dashboard → Finish: Business Decision'",
+        "code": null
+      }
+    ],
     "questions": [
       {
         "section": "หมวดที่ 1: บทบาทหน้าที่และสถาปัตยกรรมงานข้อมูล",
@@ -5865,6 +6455,7 @@
     // DOM Elements
     const portalScreen = document.getElementById('portalScreen');
     const startScreen = document.getElementById('startScreen');
+    const writtenScreen = document.getElementById('writtenScreen');
     const quizScreen = document.getElementById('quizScreen');
     const resultScreen = document.getElementById('resultScreen');
 
@@ -5897,9 +6488,125 @@
     const nextBtn = document.getElementById('nextBtn');
 
     function switchScreen(screenToShow) {
-      [portalScreen, startScreen, quizScreen, resultScreen].forEach(s => s.classList.remove('active'));
+      [portalScreen, startScreen, writtenScreen, quizScreen, resultScreen].forEach(s => s.classList.remove('active'));
       screenToShow.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function switchSubjectMode(mode) {
+      const quizBtn = document.getElementById('modeQuizBtn');
+      const writtenBtn = document.getElementById('modeWrittenBtn');
+      if (mode === 'written') {
+        if (quizBtn) quizBtn.classList.remove('active');
+        if (writtenBtn) writtenBtn.classList.add('active');
+        renderWrittenExam();
+        switchScreen(writtenScreen);
+      } else {
+        if (writtenBtn) writtenBtn.classList.remove('active');
+        if (quizBtn) quizBtn.classList.add('active');
+        switchScreen(startScreen);
+      }
+    }
+
+    function backToSubjectOverview() {
+      const quizBtn = document.getElementById('modeQuizBtn');
+      const writtenBtn = document.getElementById('modeWrittenBtn');
+      if (writtenBtn) writtenBtn.classList.remove('active');
+      if (quizBtn) quizBtn.classList.add('active');
+      switchScreen(startScreen);
+    }
+
+    let allWrittenExpanded = false;
+    function toggleAllWrittenAnswers() {
+      allWrittenExpanded = !allWrittenExpanded;
+      const boxes = document.querySelectorAll('.written-answer-box');
+      boxes.forEach(b => {
+        if (allWrittenExpanded) b.classList.add('active');
+        else b.classList.remove('active');
+      });
+      const btn = document.getElementById('toggleAllAnswersBtn');
+      if (btn) btn.textContent = allWrittenExpanded ? '🙈 ซ่อนเฉลยทั้งหมด' : '👁️ เปิดดูเฉลยทั้งหมด';
+    }
+
+    function toggleWrittenAnswer(qId) {
+      const box = document.getElementById('ansBox_' + qId);
+      if (!box) return;
+      box.classList.toggle('active');
+    }
+
+    function renderWrittenExam() {
+      const subj = allSubjects[currentSubjectKey];
+      if (!subj || !subj.written_exam) return;
+      
+      const container = document.getElementById('writtenQuestionsList');
+      container.innerHTML = '';
+      
+      let currentPartName = '';
+
+      subj.written_exam.forEach((q, idx) => {
+        if (q.part && q.part !== currentPartName) {
+          currentPartName = q.part;
+          const partDiv = document.createElement('div');
+          partDiv.className = 'written-part-divider';
+          partDiv.innerHTML = `<span>📂 ${currentPartName}</span>`;
+          container.appendChild(partDiv);
+        }
+
+        const card = document.createElement('div');
+        card.className = 'written-q-card';
+        card.id = 'writtenCard_' + q.id;
+
+        const codeBlock = q.code ? `
+          <div class="ans-sec-title">💻 โค้ด Python สำหรับตรวจผลลัพธ์การคำนวณ (Automated Verification):</div>
+          <pre class="ans-code-block"><code>${escapeHtml(q.code)}</code></pre>
+        ` : '';
+
+        card.innerHTML = `
+          <div class="written-q-header">
+            <span class="written-q-title">${escapeHtml(q.title || 'ข้อที่ ' + q.id)}</span>
+            <div class="written-q-badges">
+              <span class="badge-score">คะแนนเต็ม ${q.score} คะแนน</span>
+              <span class="badge-type">${escapeHtml(q.type || 'อัตนัย')}</span>
+            </div>
+          </div>
+          <div class="written-q-text">${escapeHtml(q.question)}</div>
+          
+          <div class="written-practice-box">
+            <textarea placeholder="พื้นที่สำหรับนักศึกษาฝึกพิมพ์ตอบคำถามข้อนี้ (จำลองการทำข้อเขียน)..."></textarea>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end;">
+            <button class="btn-toggle-answer" onclick="toggleWrittenAnswer(${q.id})">
+              <span>👁️ ดูแนวคำตอบ เฉลย และเกณฑ์การตรวจ</span>
+            </button>
+          </div>
+
+          <div class="written-answer-box" id="ansBox_${q.id}">
+            <div class="ans-sec-title">✅ คีย์ / แนวคำตอบมาตรฐาน:</div>
+            <div class="ans-sec-content">${escapeHtml(q.answer)}</div>
+
+            <div class="ans-sec-title">📊 เกณฑ์การให้คะแนน (Scoring Rubric):</div>
+            <div class="ans-sec-content">${escapeHtml(q.rubric)}</div>
+
+            <div class="ans-sec-title">📖 ข้อความอ้างอิงจากเอกสารสไลด์:</div>
+            <div class="ans-sec-content"><strong>แหล่งอ้างอิง:</strong> ${escapeHtml(q.reference)}<br><br><strong>ข้อความตรง:</strong><br>${escapeHtml(q.quote || '')}</div>
+
+            ${codeBlock}
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
     }
 
     // Update tags on Portal cards indicating in-progress quizzes
@@ -5987,6 +6694,18 @@
         }
 
         modalGuidelinesList.innerHTML = '';
+        if (subjKey === 'bi') {
+          const bannerAction = document.createElement('div');
+          bannerAction.style.cssText = 'margin-bottom: 16px; padding: 12px; background: #f3e8ff; border: 1px solid #d8b4fe; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;';
+          bannerAction.innerHTML = `
+            <span style="font-size: 0.9rem; font-weight: 700; color: #6b21a8;">💡 คุณสามารถเปิดทำข้อสอบข้อเขียนพร้อมกล่องพิมพ์ตอบได้</span>
+            <button class="btn btn-primary" style="padding: 6px 14px; font-size: 0.85rem;" onclick="closeGuidelinesModal(); switchSubjectMode('written');">
+              📝 เปิดโหมดข้อสอบข้อเขียนเต็มจอ
+            </button>
+          `;
+          modalGuidelinesList.appendChild(bannerAction);
+        }
+
         subj.guidelines.forEach(item => {
           const div = document.createElement('div');
           div.className = 'guideline-item';
@@ -5996,6 +6715,20 @@
       } else {
         guidelinesBanner.style.display = 'none';
         guidelinesBtnContainer.style.display = 'none';
+      }
+
+      // Toggle mode selector for subjects with written exam
+      const modeBox = document.getElementById('subjectModeSelector');
+      if (modeBox) {
+        if (subj.written_exam && subj.written_exam.length > 0) {
+          modeBox.style.display = 'flex';
+          const quizBtn = document.getElementById('modeQuizBtn');
+          const writtenBtn = document.getElementById('modeWrittenBtn');
+          if (quizBtn) quizBtn.classList.add('active');
+          if (writtenBtn) writtenBtn.classList.remove('active');
+        } else {
+          modeBox.style.display = 'none';
+        }
       }
 
       // Check for saved progress
