@@ -9,8 +9,8 @@ from build_full_app import mobile_questions
 # 3. Load IoT questions
 from generate_iot_questions import iot_questions
 # 4. Load Business Intelligence questions
-from generate_bi_questions import bi_questions, bi_guidelines_20
-from bi_written_exam_data import bi_written_questions_20
+from generate_bi_questions import bi_questions
+from bi_written_exam_data import bi_written_questions_20, bi_guidelines_20
 
 # 25 Original Guideline Questions for Reference Modal
 iot_guidelines_25 = [
