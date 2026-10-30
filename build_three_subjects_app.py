@@ -8,6 +8,8 @@ from generate_quiz import questions as tourism_questions
 from build_full_app import mobile_questions
 # 3. Load IoT questions
 from generate_iot_questions import iot_questions
+# 4. Load Business Intelligence questions
+from generate_bi_questions import bi_questions, bi_guidelines_20
 
 # 25 Original Guideline Questions for Reference Modal
 iot_guidelines_25 = [
@@ -87,6 +89,7 @@ def print_dist(name, q_list):
 print_dist("Tourism IT", balanced_tourism)
 print_dist("Mobile Application", balanced_mobile)
 print_dist("Internet of Things", balanced_iot)
+print_dist("Business Intelligence", bi_questions)
 
 # Build subjects dictionary
 subjects = {
@@ -132,6 +135,21 @@ subjects = {
         ],
         "guidelines": iot_guidelines_25,
         "questions": balanced_iot
+    },
+    "bi": {
+        "id": "bi",
+        "title": "ธุรกิจอัจฉริยะ (Business Intelligence Blueprint)",
+        "badge": "สาขาวิชาเทคโนโลยีสารสนเทศ / วิทยาการข้อมูล",
+        "description": "แบบทดสอบมาตรฐานระดับปริญญาตรี 80 ข้อ ครอบคลุม Data Roles (DE, DA, DS), Data Quality 6 มิติ, การคลีนข้อมูลด้วย Power Query, Star Schema Data Modeling, Cardinality, DAX Measures และการเลือกวิชวลตอบคำถามธุรกิจ",
+        "sections": [
+            {"name": "หมวดที่ 1: บทบาทหน้าที่และสถาปัตยกรรมงานข้อมูล (Data Roles & Pipeline)", "count": 16},
+            {"name": "หมวดที่ 2: คุณภาพข้อมูลและการทำความสะอาดข้อมูลด้วย Power Query", "count": 16},
+            {"name": "หมวดที่ 3: การแปลงข้อมูลขั้นสูงและกฎเกณฑ์ความถูกต้อง (Transformation & Validation)", "count": 16},
+            {"name": "หมวดที่ 4: การสร้างแบบจำลองข้อมูลและโครงสร้าง Star Schema", "count": 16},
+            {"name": "หมวดที่ 5: การคำนวณด้วย DAX และการเลือกวิชวลตอบโจทย์ธุรกิจ (Data Visualization)", "count": 16}
+        ],
+        "guidelines": bi_guidelines_20,
+        "questions": bi_questions
     }
 }
 

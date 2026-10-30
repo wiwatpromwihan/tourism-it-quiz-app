@@ -1,6 +1,6 @@
-# E-Testing & Quiz Portal: ระบบแบบทดสอบวัดความรู้ทางวิชาการ (240 ข้อ)
+# E-Testing & Quiz Portal: ระบบแบบทดสอบวัดความรู้ทางวิชาการ (320 ข้อ)
 
-เว็บแอปพลิเคชันระบบทดสอบความรู้และติวข้อสอบออนไลน์ (Interactive Quiz Portal) ครอบคลุม 3 รายวิชา รวม 240 ข้อ พัฒนาขึ้นด้วยเทคโนโลยี HTML5, CSS3, Modern JavaScript และ **Firebase Authentication (Google Sign-In) & Cloud Firestore** รองรับระบบบันทึกความคืบหน้าอัตโนมัติ (Auto-save) และฟังก์ชันทำต่อจากเดิม (Resume Quiz) เพื่อป้องกันการออกกะทันหัน
+เว็บแอปพลิเคชันระบบทดสอบความรู้และติวข้อสอบออนไลน์ (Interactive Quiz Portal) ครอบคลุม 4 รายวิชา รวม 320 ข้อ พัฒนาขึ้นด้วยเทคโนโลยี HTML5, CSS3, Modern JavaScript และ **Firebase Authentication (Google Sign-In) & Cloud Firestore** รองรับระบบบันทึกความคืบหน้าอัตโนมัติ (Auto-save) และฟังก์ชันทำต่อจากเดิม (Resume Quiz) เพื่อป้องกันการออกกะทันหัน
 
 🌐 **เข้าใช้งานออนไลน์ผ่าน GitHub Pages**: [https://wiwatpromwihan.github.io/tourism-it-quiz-app/](https://wiwatpromwihan.github.io/tourism-it-quiz-app/)
 
@@ -49,6 +49,14 @@
 - **หมวดที่ 4 (16 ข้อ)**: การควบคุมอุปกรณ์และการประยุกต์ใช้งานเชิงปฏิบัติ (การควบคุม Relay 220V ผ่าน ESP32, Active Low/High, IoT MQTT Panel, การแยก Topic ควบคุม 2 แชนแนล, Sampling rate vs Battery/Bandwidth, Feedback loop)
 - **หมวดที่ 5 (16 ข้อ)**: การติดตั้ง Edge Server Raspberry Pi & การออกแบบระบบภาพรวม (Local Edge Server vs Cloud, Nginx Web Server, IP checking, Service auto-start `systemctl`, การออกแบบระบบ IoT ห้องเรียนครบวงจร)
 - **ฟังก์ชันพิเศษ**: มีปุ่มกดดู **แนวทางข้อสอบปลายภาค 25 ข้อฉบับเต็ม** ในรูปแบบ Modal หน้าต่างอ่านทบทวน
+
+### วิชาที่ 4: ธุรกิจอัจฉริยะ (Business Intelligence Blueprint) (80 ข้อ พร้อมแนวข้อสอบข้อเขียน 20 ข้อและเกณฑ์เฉลย)
+- **หมวดที่ 1 (16 ข้อ)**: บทบาทหน้าที่และสถาปัตยกรรมงานข้อมูล (Data Roles & Pipeline Architecture: Data Engineer vs Data Analyst vs Data Scientist, วงจร Clean → Model → Calculate → Visualize)
+- **หมวดที่ 2 (16 ข้อ)**: คุณภาพข้อมูลและการทำความสะอาดข้อมูลด้วย Power Query (Data Quality 6 มิติ: Accuracy, Completeness, Consistency, Validity, Uniqueness, Timeliness, Garbage In Garbage Out, Remove Duplicates vs Transaction จริง, Null/Missing Values, Trim/Clean/Upper)
+- **หมวดที่ 3 (16 ข้อ)**: การแปลงข้อมูลขั้นสูงและกฎเกณฑ์ความถูกต้อง (Transformation & Validation: Rename Columns, Reference/Mapping Table กับ Standard Province, แปลงหน่วย Standard Unit & Formulas, สกุลเงิน Exchange Rate, Data Validation / Business Rules)
+- **หมวดที่ 4 (16 ข้อ)**: การสร้างแบบจำลองข้อมูลและโครงสร้าง Star Schema (Data Modeling & Relationships: Flat Table vs Data Model, Fact Table vs Dimension Table, Cardinality 1:1, 1:*, *:*, Bridge Table ตารางกลาง, Cross-filter direction จาก Dimension สู่ Fact)
+- **หมวดที่ 5 (16 ข้อ)**: การคำนวณด้วย DAX และการเลือกวิชวลตอบโจทย์ธุรกิจ (DAX & Data Visualization: การสร้าง Measure, หลักการเลือกกราฟจากคำถามที่ต้องการตอบ, Card/KPI, Bar/Column, Line, Table/Matrix, Pie/Donut, Scatter, Map, Treemap, Funnel, Waterfall, Ribbon, Decomposition Tree Root Cause Analysis)
+- **ฟังก์ชันพิเศษ**: มีปุ่มกดดู **แนวข้อสอบข้อเขียน 20 ข้อพร้อมเกณฑ์เฉลยฉบับเต็ม** ในรูปแบบ Modal หน้าต่างอ่านทบทวน
 
 ---
 

@@ -329,6 +329,11 @@ html_content = f"""<!DOCTYPE html>
       color: #059669;
     }}
 
+    .subject-icon-box.purple {{
+      background: #f3e8ff;
+      color: #9333ea;
+    }}
+
     .subject-card-title {{
       font-size: 1.1rem;
       font-weight: 700;
@@ -1212,6 +1217,27 @@ html_content = f"""<!DOCTYPE html>
               </span>
             </div>
           </div>
+
+          <!-- Card Subject 4: Business Intelligence -->
+          <div class="subject-card" onclick="selectSubject('bi')">
+            <div id="resumeTag_bi" class="subject-resume-tag" style="display: none;">
+              <span>📌 ทำค้างอยู่</span>
+            </div>
+            <div>
+              <div class="subject-icon-box purple">
+                <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+              </div>
+              <h2 class="subject-card-title">ธุรกิจอัจฉริยะ (Business Intelligence Blueprint)</h2>
+              <p class="subject-card-desc">สถาปัตยกรรมข้อมูล 80 ข้อ: Data Roles (DE, DA, DS), Data Quality 6 มิติ, Power Query Cleansing, Star Schema (Fact/Dimension), Cardinality, DAX Measures และการเลือกวิชวลตอบโจทย์ธุรกิจ</p>
+            </div>
+            <div class="subject-footer">
+              <span class="subject-pill">80 ข้อ</span>
+              <span class="btn-select">
+                เข้าทำข้อสอบ
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1223,8 +1249,8 @@ html_content = f"""<!DOCTYPE html>
             เลือกวิชาอื่น
           </button>
           <div id="guidelinesBtnContainer" style="display: none;">
-            <button class="btn-view-guidelines" onclick="openGuidelinesModal()">
-              📋 ดูแนวทางข้อสอบปลายภาค 25 ข้อฉบับเต็ม
+            <button id="viewGuidelinesBtn" class="btn-view-guidelines" onclick="openGuidelinesModal()">
+              📋 ดูแนวทางข้อสอบฉบับเต็ม
             </button>
           </div>
         </div>
@@ -1249,8 +1275,8 @@ html_content = f"""<!DOCTYPE html>
         </div>
 
         <div id="guidelinesBanner" class="guideline-box" style="display: none;">
-          <span class="guideline-info">💡 ข้อสอบชุดนี้สร้างขึ้นตามแนวทางข้อสอบปลายภาค 25 ข้อ โดยเน้นหลักการทำงาน การวิเคราะห์สถานการณ์ และการประยุกต์ใช้จริง</span>
-          <button class="btn-view-guidelines" onclick="openGuidelinesModal()">อ่านแนวคำถาม 25 ข้อ</button>
+          <span id="guidelinesBannerText" class="guideline-info">💡 ข้อสอบชุดนี้มีเอกสารแนวทางและการวิเคราะห์เชิงลึก</span>
+          <button id="bannerGuidelinesBtn" class="btn-view-guidelines" onclick="openGuidelinesModal()">อ่านแนวทาง</button>
         </div>
 
         <div class="syllabus-box">
@@ -1362,11 +1388,11 @@ html_content = f"""<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- Modal for 25 Exam Guidelines -->
+  <!-- Modal for Exam Guidelines -->
   <div id="guidelinesModal" class="modal-overlay" onclick="closeGuidelinesModal(event)">
     <div class="modal-card" onclick="event.stopPropagation()">
       <div class="modal-header">
-        <h3 class="modal-title">📋 แนวทางข้อสอบปลายภาค วิชา อินเทอร์เน็ตของสรรพสิ่ง (8312404)</h3>
+        <h3 class="modal-title" id="guidelinesModalTitle">📋 เอกสารแนวทางข้อสอบ</h3>
         <button class="modal-close" onclick="closeGuidelinesModal()">&times;</button>
       </div>
       <div class="modal-body" id="modalGuidelinesList">
@@ -1602,7 +1628,7 @@ html_content = f"""<!DOCTYPE html>
 
     // Update tags on Portal cards indicating in-progress quizzes
     window.updatePortalResumeTags = function() {{
-      ['tourism', 'mobile', 'iot'].forEach(key => {{
+      ['tourism', 'mobile', 'iot', 'bi'].forEach(key => {{
         const tag = document.getElementById('resumeTag_' + key);
         if (!tag) return;
         const saved = getSavedProgress(key);
@@ -1666,6 +1692,24 @@ html_content = f"""<!DOCTYPE html>
       if (subj.guidelines && subj.guidelines.length > 0) {{
         guidelinesBanner.style.display = 'flex';
         guidelinesBtnContainer.style.display = 'block';
+
+        const modalTitle = document.getElementById('guidelinesModalTitle');
+        const viewBtn = document.getElementById('viewGuidelinesBtn');
+        const bannerBtn = document.getElementById('bannerGuidelinesBtn');
+        const bannerText = document.getElementById('guidelinesBannerText');
+
+        if (subjKey === 'bi') {{
+          if (modalTitle) modalTitle.textContent = '📋 แนวข้อสอบข้อเขียน 20 ข้อพร้อมเกณฑ์เฉลย วิชา ธุรกิจอัจฉริยะ (Business Intelligence)';
+          if (viewBtn) viewBtn.textContent = '📋 ดูแนวข้อสอบข้อเขียน 20 ข้อพร้อมเกณฑ์เฉลยฉบับเต็ม';
+          if (bannerBtn) bannerBtn.textContent = 'อ่านแนวข้อสอบ 20 ข้อ';
+          if (bannerText) bannerText.textContent = '💡 ข้อสอบชุดนี้สร้างขึ้นตามพิมพ์เขียว Business Intelligence Blueprint พร้อมแนวข้อสอบข้อเขียน 20 ข้อและเกณฑ์เฉลย';
+        }} else {{
+          if (modalTitle) modalTitle.textContent = '📋 แนวทางข้อสอบปลายภาค วิชา อินเทอร์เน็ตของสรรพสิ่ง (8312404)';
+          if (viewBtn) viewBtn.textContent = '📋 ดูแนวทางข้อสอบปลายภาค 25 ข้อฉบับเต็ม';
+          if (bannerBtn) bannerBtn.textContent = 'อ่านแนวคำถาม 25 ข้อ';
+          if (bannerText) bannerText.textContent = '💡 ข้อสอบชุดนี้สร้างขึ้นตามแนวทางข้อสอบปลายภาค 25 ข้อ โดยเน้นหลักการทำงาน การวิเคราะห์สถานการณ์ และการประยุกต์ใช้จริง';
+        }}
+
         modalGuidelinesList.innerHTML = '';
         subj.guidelines.forEach(item => {{
           const div = document.createElement('div');
